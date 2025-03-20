@@ -1,0 +1,40 @@
+# import numpy as np
+
+# def _find(target):
+#     count=0
+#     res=[]
+#     for id, data in enumerate(ls):
+#         if(data==target):
+#             count+=1
+#             res.append(id)
+#         if count==2:
+#             return res
+#     return res
+
+
+# n = int(input())
+# ls = input().split(' ')
+# ls = [int(i) for i in ls]
+# res=1e8
+# for i in ls:
+#     index = _find(i)
+#     if len(index)>1 and res>index[1]-index[0]+1:
+#         res=index[1]-index[0]+1
+# if res == 1e8:
+#     print(-1)
+# else:print(res)
+
+N = int(input())
+A = list(map(int, input().split()))
+ans = N + 1
+pos = [[] for _ in range(1_000_001)]
+for i in range(N):
+    pos[A[i]].append(i)
+for i in range(1_000_001):
+    if len(pos[i])<2:
+        continue
+    for j in range(len(pos[i]-1)):
+        ans = min(ans, 1+pos[i][j+1]-pos[i][j])
+if ans==N+1:
+    print(-1)
+else:print(ans)
