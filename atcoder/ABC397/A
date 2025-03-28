@@ -1,0 +1,7 @@
+t = float(input())
+res=3
+if t>=38:
+    res=1
+elif t>=37.5:
+    res=2
+print(res)
