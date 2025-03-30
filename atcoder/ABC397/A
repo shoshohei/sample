@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 t = float(input())
 res=3
 if t>=38:
     res=1
 elif t>=37.5:
     res=2
+=======
+t = float(input())
+res=3
+if t>=38:
+    res=1
+elif t>=37.5:
+    res=2
+>>>>>>> 660d0d0f24734efffae7e8823a1955937c02e1a1
 print(res)

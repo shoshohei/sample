@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 s=list(input())
 len = len(s)
 i='i'
@@ -15,4 +16,23 @@ for j,c in enumerate(s):
         len +=1
     index+=1
 if len%2!=0:res+=1
+=======
+s=list(input())
+len = len(s)
+i='i'
+o='o'
+res=0
+index=0
+for j,c in enumerate(s):
+    if index%2==0 and c!=i:
+        res+=1
+        index+=1
+        len+=1
+    elif index%2==1 and c!=o:
+        res+=1
+        index+=1
+        len +=1
+    index+=1
+if len%2!=0:res+=1
+>>>>>>> 660d0d0f24734efffae7e8823a1955937c02e1a1
 print(res)
