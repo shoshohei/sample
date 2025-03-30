@@ -1,0 +1,749 @@
+\documentclass{ltjsarticle}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{bm}
+
+\theoremstyle{definition}
+\newtheorem{thm}{Th}[subsection]
+%\newtheorem{prop}{Prop}[subsection]
+\newtheorem{definition}{Def}[subsection]
+\newtheorem{prop}[thm]{Prop}
+
+\renewcommand{\thedefinition}{\arabic{definition}}
+%\renewcommand{\theprop}{\arabic{subsection}.\arabic{prop}}
+\renewcommand{\thethm}{\arabic{subsection}.\arabic{thm}}
+
+\newtheoremstyle{propcorollarystyle}
+  {\topsep}    % 上のスペース
+  {\topsep}    % 下のスペース
+  {\itshape}   % 本文のフォント
+  {}           % 見出しのインデント
+  {\bfseries}  % 見出しのフォント
+  {.}          % 見出しの後の句読点
+  {.5em}       % 見出しと本文の間のスペース
+  {\thmname{#1} \thmnumber{#2} 系}
+\theoremstyle{propcorollarystyle}
+\newtheorem{propcor}[thm]{Prop}
+
+\newtheoremstyle{thmcorollarystyle}
+  {\topsep}    % 上のスペース
+  {\topsep}    % 下のスペース
+  {\itshape}   % 本文のフォント
+  {}           % 見出しのインデント
+  {\bfseries}  % 見出しのフォント
+  {.}          % 見出しの後の句読点
+  {.5em}       % 見出しと本文の間のスペース
+  {\thmname{#1} \thmnumber{#2} 系}
+\theoremstyle{thmcorollarystyle}
+\newtheorem{thmcor}[thm]{Th}
+
+
+\begin{document}
+
+\title{解析入門}
+\author{杉浦 光夫}
+\maketitle
+
+\section*{第I章 実数と連続}
+\refstepcounter{section}
+\subsection*{\S1 実数} 
+\refstepcounter{subsection}
+実数はきわめて多くの性質を持つが，実数の性質はすべて以下に述べる17個の性質(R1)～(R17)から論理的に導くことができる．
+いいかえるとこの17個の性質が実数の最も基本的な性質である．
+この17個の性質を持つ数学的対象は$\mathbb{R}$以外にはなく，これらの性質は実数を特徴づける．
+しかしそれら17個の性質一つ一つは，実数以外の多くの数学的対象によっても満たされる一般的な形の命題である．
+この17個をその性質から3つの種類に分類することができる．
+それぞれ[1]四則演算，[2]順序，[3]連続の公理，の3つである．
+\subsubsection*{[1]四則演算}
+$\mathbb{R}$の任意の二つの元$a,b$に対し，その\textbf{和}$a+b$，\textbf{積}$ab$と呼ばれる実数が定義され，次の(R1)～(R10)までの条件を満たす．\par
+ (R1) $a+b=b+a$. (和の交換率)\par
+ (R2) $(a+b)+c=a+(b+c)$. (和の結合則)\par
+ (R3) $\mathbb{R}$の元0が存在し，$\forall a \in \mathbb{R}$に対し$a+0=a$を満たす. (0の存在)\par
+ (R4) $\forall a \in \mathbb{R}$に対し，$-a \in \mathbb{R}$が存在し，$a+(-a)=0を満たす. (-aの存在)$\par
+ (R5) $ab=ba$. (積の交換律)\par
+ (R6) $a(bc)=(ab)c$. (積の結合則)\par
+ (R7) $(a+b)c=ac+bc$. (分配則)\par
+ (R8) $1 \in \mathbb{R}$が存在し，$\forall a\in \mathbb{R}$に対して$1a=a$を満たす. (1の存在)\par
+ (R9) $0\neq \forall a \in \mathbb{R}$に対し，$a^{-1}$が存在し$aa^{-1}=1$となる. (逆元の存在)\par
+ (R10) $1\neq0$ (0以外の元の存在)\par
+$a+(-b)$は$a-b$と記し，$a$ と$b$の\textbf{差}という．また$ab^{-1}$は$a/b,\frac{a}{b}$などと記し，
+$aのb$による\textbf{商}という.和,差,積,商を作る演算をそれぞれ加法，減法，乗法，除法という.\par
+一般に一つの集合$K$において$a+b, ab$が定義され上の(R1)～(R10)において$\mathbb{R}$を$K$と置き換えたものを満たすとき，$Kは\textbf{体}$であるという.
+このことから「$\mathbb{R}$は体である」ということができ，$\mathbb{R}$を\textbf{実数体}という.
+また一つの集合$K$の任意の二つの元$a,b$に対し$a+b\in K$が定義され，(R1)～(R4)を満たすとき，$K$を\textbf{加群}という．$\mathbb{R}$は加法に関し，
+加群を作る．また$\mathbb{R}^{*}=\mathbb{R}/\{0\}$は(R5)(R6)(R8)(R9)により，積$ab$に対し加群となる．
+このように演算を和の形で書かないとき加群の代わりに\textbf{可換群}という．また一つの集合$K$の任意の二元$a,b$に対し和$a+b$,積$ab$が定義され
+(R1)～(R4),(R6)(R7)を満たすとき$K$を\textbf{環}といい，(R5)も満たすとき\textbf{可換環}という．$\mathbb{Z}$は可換環であるが体ではない．
+(積の逆元$a^{-1}$が存在しないため)\par
+
+\subsubsection*{[2]順序}
+$\forall a,\forall b \in \mathbb{R}$に対し「$aはb$より小であるか等しい」
+という関係$a\le b$は$\forall a,\forall b,\forall c \in \mathbb{R}$に対し\\次の(R11)～(R16)を満たす．\par
+ (R11) $a\le a$. (反射律)\par
+ (R12) $a \le b, b \le a \Rightarrow a=b$. (反対称律)\par
+ (R13) $a \le b, b \le c \Rightarrow a \le b$. (推移律)\par
+ (R14) $a \le b$または$b \le a$の少なくとも一方が成り立つ. (全順序性)\par
+ (R15) $a \le b \Rightarrow a+c \le b+c$.\par
+ (R16) $a,b \ge 0$ \Rightarrow $ab \ge 0$.\par
+また「$a \le b$かつ$a \neq b$」という関係を$a < b$と記す．$a > 0,a<0$に応じて$a$を\textbf{正}または\textbf{負}という．この時次の同値が成り立つ．\par
+\noindent
+\makebox[3em][l]{\text{(1.0)}}
+\hfil
+$a \le b \iff a<b または a=b$
+\hfil
+
+ さらに(1.0)(R14)(R12)より次のことが成り立つ.\par
+\noindent
+\makebox[3em][l]{\text{(1.1)}}
+\hspace{1em}
+ $\forall a, \forall b \in \mathbb{R}に対し，\mathrm{i}) a \le b, \mathrm{ii}) a = b, \mathrm{iii}) a \ge b$ のいずれか一つが成り立つ.\par
+ (R15)から\par
+\noindent
+\makebox[3em][l]{\text{(1.2)}}
+\hfil
+$a \le 0 \Rightarrow -a \ge  0$
+\hfil
+\par
+ (R16)より\par
+\noindent
+\makebox[3em][l]{\text{(1.3)}}
+$\forall a \in \mathbb{R}$に対し，$(a)^{2} = (-a)^{2} \ge 0$\par
+ 特に$1^2=1$から(R10), (1.0)より\par
+\noindent
+\makebox[3em][l]{\text{(1.4)}}
+\hfil
+$1 >0$\par
+\hfil
+
+一般に(R1)～(R16)を満たす集合を\textbf{順序体}と呼ぶ．また一般に(R11,12,13)を満たす関係$\le $が定義された集合を\textbf{順序集合}という．
+順序集合が(R14)を満たすとき，\textbf{全順序集合}と呼ぶ． \par
+\textbf{例1})ある集合$X$の部分集合全体の集合$P(X)$は，$A \subset B$のとき$A \le  B$と定義すれば順序集合になる．これは一般に全順序集合ではない．
+例えば$X=\mathbb{R}$のとき，$A=\{1,2\}, B=\{2,3\}とすればA \subset B でもA \supset B$でもない．\par
+
+\begin{prop}
+ $\forall a,\forall b \in \mathbb{R}(a<b)$に対し，$a<c<bを満たすc \in \mathbb{R}$が存在する．
+\end{prop} 
+\begin{proof}
+  $c=2^{-1}(a+b)$とおけば，
+  \begin{align*}
+    a <b 
+    &\iff 2a < a+b \quad \because (R15) \\
+    &\iff a < 2^{-1}(a+b) \quad \because (R9) \\
+    &\iff a < c
+  \end{align*}
+  \begin{align*}
+    a < b 
+    &\iff a+b < 2b \quad \because (R15) \\
+    &\iff 2^{-1}(a+b) < b \quad \because (R9) \\
+    &\iff c < b
+  \end{align*}
+  したがって$a < c < b$
+\end{proof}
+
+このProp1.1は任意の実数のいくらでも近くに別の実数が存在することを示している．
+実数のこの性質を「$\mathbb{R}$は\textbf{稠密順序集合}である」という．
+この性質は任意の順序体が持っている性質で次の形で用いられる．\par
+(1.5) $a \ge 0$が$\forall \epsilon >0$に対し$\epsilon > a$を満たすなら$a = 0$である．\par
+実際$a > 0$ならProp1.1から$a>\epsilon >0なる\epsilon$が存在することになり，仮定に反する．
+
+$\mathbb{R} \supset A$に対し，$mがA$の\textbf{最大元}であるとは，($\mathrm{i})m \in A$であり，
+($\mathrm{ii})\forall a \in A に対しa \le m$の二つを満たすことをいう\par
+$Aの最大元mをm=MaxA$と記す．同様に\textbf{最小元}$n=MinA$と定義される．
+任意の集合$A$に対し最小元，最大元が存在するとは限らないが存在する場合はただ一つである．\par
+\textbf{例2}) $[0,1)=\{x \in \mathbb{R} \mid 0 \le x <1\}$の最小元は0だが最大元は存在しない．
+しかし(R14)により二つの実数$a,bのなす集合\{a,b\}$は最大元，最小元をもつ．
+\begin{equation*}
+  Max\{a, Max\{b,c\}\}=Max\{a,b,c\}
+\end{equation*}
+より三つの元からなる集合についても最大元，最小元が存在する．同様に$\mathbb{R}$の空でない任意の有限部分集合に対し最大元，最小元が存在する．\par
+ $\forall a \in \mathbb{R}$に対し(1.4)から$a-1<a<1+1$となるから次のことが成り立つ．\par
+(1.6) $\mathbb{R}$には最大元も最小元も存在しない．\par
+$\forall a \in \mathbb{R}$に対し$Max\{-a,a\}を|a|と記し，a$の\textbf{絶対値}という．\par
+定義から次のことが成り立つ．\par
+
+\noindent
+\makebox[3em][l]{\text{(1.7)}}
+\hfill
+$
+|a| =
+\begin{cases}
+a, & a \geq 0 \text{のとき}, \\
+-a, & a < 0 \text{のとき}.
+\end{cases}
+$
+\hfill\null
+
+\noindent
+\makebox[3em][l]{\text{(1.8)}}
+\hfil
+$|-a|=|a|$.
+
+\noindent
+\makebox[3em][l]{\text{(1.9)}}
+\hfil
+$-|a| \le a \le |a|$.
+\hfil
+\par
+
+\begin{prop}
+  $\forall a,\forall b \in \mathbb{R}$の絶対値$|a|, |b|$について以下の$\mathrm{i}).\mathrm{ii}).\mathrm{iii}).\mathrm{iv}).$が成り立つ．\par
+  $\mathrm{i}) \quad |a| \ge 0$について等号が成り立つのは$a=0$のみ.\par
+  $\mathrm{ii}) \quad |a||b|=|ab|$.\par
+  $\mathrm{iii}) \quad |a|+|b|\ge |a+b|$.\par
+  $\mathrm{iv}) \quad |a| -|b| \le |a+b|$.\par
+\end{prop}
+\begin{proof}
+  \begin{enumerate}[label={\roman*}),itemsep=1em]
+    \item 定義から$|a|=0$となるのは$a=0$のみ
+    \item 3つに場合分けして証明する
+    \[
+      \begin{aligned}
+        & a,b \ge 0のとき|a||b|=ab=|ab|.\\
+        & a \ge 0, b \le 0のとき|a||b|=a \cdot (-b)=-ab=|ab|.\\
+        & a \le 0, b \le 0のとき|a||b|=(-a)(-b)=ab=|ab|.
+      \end{aligned}
+    \]
+    \item 定義より$-(a+b), a+b \le |a|+|b|$を示せばよい．
+      \begin{align*}
+        \text{(1.9)より}-|a| \le a \le |a|, -|b| \le b \le |b|\text{であるので}\\
+        -|a|-|b| \le a+b \le |a|+|b| \Rightarrow -(a+b) \le |a|+|b|.
+      \end{align*}
+    \item $\mathrm{iii})$について$a=(a+b)+(-b)$すると\par
+      \begin{align*}
+        |a|+|b| & =|(a+b)+(-b)|+|b|\\
+        & \le |a+b|+2|b|\\
+        & \Rightarrow |a|  \le |a+b|+|b|\\
+        & \Rightarrow |a|-|b|  \le |a+b|
+      \end{align*}
+  \end{enumerate}
+\end{proof}
+
+幾何的には実数体$\mathbb{R}$は一本の直線で表される．ユークリッド空間内の一つの直線$l$とその上の一点$O$をとるとき，
+$O$からの距離が$\forall x \in \mathbb{R}$の$l$上の点を$X$とすれば，この$x \mapsto X$という対応により$\mathbb{R}とl$の間に一対一対応が成り立つ．
+この時の距離は符号がついたものを考える．また$|x-y|は点X,Y$の順序によらずその間の距離$\ge$を表す．
+以上の(R1)～(R16)は実数体$\mathbb{R}$の基本的性質だが，これを満たすものは他にもたくさん存在し$\mathbb{Q}$はその一つである．\par
+
+\textbf{例３} 実数を係数とする文字$t$の有理式全体を$\bm{R}(t)$と記す．これは通常の四則演算に対して体を作る．$\bm{R}(t)$の元の間に次のようにして順序を定義する．\par
+多項式
+\begin{equation*}
+  f(t)=a_{0}+a_{1}t+a_{2}t^{2}+\dots+a_{n}t^{n}
+\end{equation*}
+に対して$a_{n}>0のときf>0$と定義し，有理式$g/fに対してはfg \ge 0のときg/f \ge 0$とする．そして二つの有理式$f,gに対しg-f \ge 0のときg \ge f$と定義する．
+このとき$\bm{R}(t)$は順序体となる．この順序を$\bm{R}(t)$の\textbf{字引付順序}という．$\mathbb{R}$の代わりに任意の順序体についても同様である．\par
+\par
+
+これら多くの順序体の中で時数体を特徴づけるものが連続の公理である．連続の公理を述べるために二つの言葉を定義する．\par
+\begin{definition}
+  実数$b$が$\mathbb{R}$の部分集合$A$の\textbf{上界(upper bound)}であるとは，$\forall a \in Aに対してa \le b$が成り立つことをいう．
+  また$c \in \mathbb{R}$が$\forall a \in \mathbb{R}$に対し$c \le a$をみたすとき，$c$は$A$の\textbf{下界(lower bound)}という．
+\end{definition}
+$A$の上界，下界の集合をそれぞれ$U(A),L(A)$と記す．$U(A) \neq \phi$のとき，$A$は\textbf{上に有界}であるといい，
+$L(A) \neq \phi$のとき，$A$は\textbf{下に有界}であるという．上下に有界ならば単に\textbf{有界}という．\par
+定義から明らかに\par
+\[
+\makebox[0pt][l]{\hspace{-16.5em}\raisebox{0.3\baselineskip}{\text{(1.10)}}}
+\begin{aligned}
+  & b \in U(A),b \le c \Rightarrow c \in U(A)\\
+  & b \in L(A),b \ge c \Rightarrow c \in L(A)  
+\end{aligned}
+\]
+
+\begin{definition}
+  $U(A)$の最小元$m$が存在すれば，$m$を$A$の\textbf{最小上界(least upper bound)}または\textbf{上限(supremum)}といい，\\
+  \[
+  m=\text{l.u.b.}A=\text{sup}A
+  \]
+  とあらわす．\\
+  同様に$L(A)$の最大元$l$が存在すれば，$l$を$A$の\textbf{最大下界(greatest lower bound)}または\textbf{下限(infimum)}といい，\\
+  \[
+  l=\text{g.l.b.}A=\text{inf}A
+  \]
+  とあらわす．
+\end{definition}
+
+\textbf{例4} $A=[0,1)=\{x \in \mathbb{R} \mid 0 \le x <1\}$のとき，sup$A=1$, inf$A=0$\\
+
+Def 2の定義は次のように言い換えることができる\\
+\begin{prop}
+  $m \in \mathbb{R}$が$A \subset \mathbb{R}$の上限となるために必要十分条件は次の1)2)である．
+  \begin{enumerate}[label={\arabic*)}, itemsep=1em]
+    \item $\forall a \in A$に対し$a \le m$.
+    \item $x <m$となる任意の$x$に対し，$x<a$となる$a \in A$が存在する
+  \end{enumerate}
+  同様に$l=$inf$A$となる必要十分条件は，1)'2)'である．
+  \begin{enumerate}[label={\arabic*)'}, itemsep=1em]
+    \item $\forall a \in A$に対し，$a \ge l$
+    \item $x>l$となる任意の$x$に対し，$x>a$となる$a \in A$が存在する
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+  上限の定義より$m=\text{sup}A \in U(A)$であるから$a \le m$\par
+  また$x < m$となる$x$は$A$の上界でない．このとき，(1.10)の対偶から「$\forall x \notin U(A) \Rightarrow x < a, a \notin U(A)$」．これは(2)である\par
+  逆に(1), (2)を満たすなら明らかに$m$は$A$の上限である．\par
+  下限$l$についても同様．
+\end{proof}
+
+\addtocounter{thm}{-1}
+\begin{propcor}
+  \begin{enumerate}[label={\arabic*)}, itemsep=1em]
+    \item $\text{Max}A$が存在するなら$\text{sup}A=\text{Max}A$
+    \item $\text{Min}A$が存在するなら$\text{inf}A=\text{Min}A$
+  \end{enumerate}
+\end{propcor}
+\begin{proof}
+  $m=\text{Max}A$とすると$m$はProp1.3を満たすので，$m=\text{sup}A=\text{Max}A$．
+\end{proof}
+上限，上界は任意の順序体で定義されるが，$A$の上界が存在しても$A$の上限が存在するとは限らない．
+
+\textbf{例5}) 有理数体$\mathbb{Q}$の部分集合$A=\{x \in \mathbb{Q} \mid x >0, x^{2} <2\}$の上界$U(A)=\{x \in \mathbb{Q} \mid x^{2} \ge 2\}$
+の最小元は存在しない．なぜなら，$x^{2}=2 \Rightarrow x=\sqrt{2} \notin \mathbb{Q}$．\par
+またこのような$s \in \mathbb{Q}$が存在すると仮定して矛盾を示す．
+\begin{proof}
+  $0 < \forall \epsilon \in \mathbb{R}, s > s- \epsilon >0$をとると，Prop1.1.3(2)から$s - \epsilon < a$となる$a \in A$が存在する．
+  $(s - \epsilon)^{2} < 2 \Rightarrow s^{2}-2\epsilon +\epsilon^{2} < 2 $．ここで$\epsilon > 0$は任意なので$s^{2} \le 2$となる．\par
+  ここで$s^{2} < 2$とすると適当な$0<t\in \mathbb{Q}$をとると$s^{2}<t^{2}<2$となるので，$t \in A, s<t$となり$s$が$A$の上限であることに反する．(このような$t$として，)
+  そのため$s^{2}=2$である．$s$は有理数なので$s=\frac{p}{q}(p, q \in \mathbb{Z}\setminus \{0\})$とあらわせ，$p^{2}=2q^{2}$となるが素因数分解の一意性より矛盾する．
+\end{proof}
+
+\subsubsection*{[3]連続の公理}
+ (R17) 実数体$\mathbb{R}$の上に有界な任意の部分集合$A \neq \phi$に対し，$A$の上限(最小上界)$s = \text{sup}A$が$\mathbb{R}$の中に存在する．
+この連続の公理が以下において種々の極限の存在を保証する役割を果たす．本書内にその例は幾度も現れるが\S3では特にこの公理から導かれる諸定理を述べてある．ここではこの公理が有効な一つの例を挙げる．\par
+ \textbf{例6}) $0 < \forall a \mathbb{R}$に対し，$b^{2}=a$となる$0 < b \in \mathbb{R}$となる$b$がただ一つ存在する．
+$b$を$a$の(正の)\textbf{平方根}と呼び$b=\sqrt{a}=b^{\frac{1}{2}}$とあらわす．
+ いま$A=\{x \in \mathbb{R} \mid x \ge 0, x^{2} \le a \}$とおくと$A \neq \phi$である．たとえば$a \ge 1$ならば$1 \in A$，$a \< 1$ならば$a \in A$である．
+また$A$は上に有界である．
+実際$a \le 1$なら$1$が$A$の上界であり，$1 < a$ならば$a$が$A$の上界となる．そこで連続の公理から$\text{sup}A=b \in \mathbb{R}$が存在する．$A$は正の数を含むので$b>0$である．
+$b^{2}=a$を証明するのにもし$b^{2}<a$となったとすると，$\epsilon > 0$に対して$(b+\epsilon)>b$が$A$に含まれる，つまり$(b+\epsilon)^{2}\le a$となれば$b < b+\epsilon  \in A$となり
+上界$b$よりも大きい$A$に属する元が存在することで$b$が上界であることに反する．
+$(b+\epsilon)^{2}=b^{2}+2b\epsilon+\epsilon^{2}$
+ここで$\epsilon^{2} < b\epsilon(2b\epsilon, \epsilon^{2}\text{を一つの項にまとめるため}), b^{2}+3b\epsilon \le a$とするために
+$\epsilon = \text{Min} \{b, \frac{a-b^{2}}{3b}\}$とする．
+\begin{align*}
+  (b+\epsilon)^{2}&=b^{2}+2b\epsilon+\epsilon^{2}\\
+  &\le b^{2}+3b\epsilon\\
+  &\le a
+\end{align*}
+このことから$(b+\epsilon)^{2} \le a$を満たすので$b < b+ \epsilon \in A$となり，$b$が$A$の上界であることに矛盾するため$b^{2} <a$ではない．\par
+次に$b^{2} > a$とすると，$\epsilon = \text{Min}\{b, \frac{b^{2}-a}{3b}\}$とおけば$\epsilon > 0, b-\epsilon > 0$で
+\begin{align*}
+  (b+\epsilon)^{2} &= b^{2}-2b\epsilon+\epsilon^{2}\\
+  &\ge b^{2}-3b\epsilon\\
+  &\ge a
+\end{align*}
+となる．また$b-\epsilon<b$は$A$の上界でないので$(b-\epsilon)^{2} \le a$が成り立つ．しかしこれは上の不等式と矛盾する．以上より$b^{2}=a$である．
+また$b$の一意性は次のように導かれる．\par
+$b_1 > 0, b_1^{2}=a$となる$b_1 \in \mathbb{R}$が存在するとすれば，
+$(b-b_1)(b+b_1)=b^{2}-b_1^{2}=a-a=0, b,b_1>0\Rightarrow b+b_1>0 \Rightarrow b-b_1=0$
+このため$b$は一意である．\par
+ 先ほどの連続公理では上限の存在のみについて述べており，下限については述べていないがその存在は連続公理から導かれる．
+
+\begin{prop}
+  下に有界な$\mathbb{R}$の任意の部分集合$B \neq \phi$に対して，$\text{inf}B=t$が存在し，$\text{inf}B=-\text{sup}(-B)$である．
+\end{prop}
+\begin{proof}
+  $B=-A$とする．つまり$A=\{-b \mid b \in B\}$．$l$を$B$の下界とすれば，$\forall b \in B$に対し$l \le b$．
+  このとき$\forall a \in A$に対し$-l \ge a$つまり$-l$は$A$の上界であるので$A$は上に有界．このとき連続の公理から$A$の上限$s=\text{sup}A \in \mathbb{R}$が存在する．
+  さらにProp1.3から次の1), 2)が成り立つ．
+  \begin{enumerate}[label={\arabic*})]
+    \item $\forall a \in A$に対し$a \le s$
+    \item $c < s$となる任意の$c$に対し，$c < a$となる$a \in A$が存在する
+  \end{enumerate}
+  これを言い換えると，\\ $s=-t, c=-d$とおくと
+  $a \in A$に対し$a \le -t \Rightarrow b \in B$に対し$b \ge t$.\\
+  $-d < -t$となる任意の$d$に対し，$-d < -b$となる$b \in B$が存在する\\
+  $\Rightarrow d > t$となる任意の$d$に対し，$d>b$となる$b$が存在する．\\
+  この二つはProp1.1.3の下限についての必要十分条件である．このため$t=\text{inf}B \Rightarrow \text{inf}B=-\text{sup}(-B)$となる．
+\end{proof}
+
+\begin{prop}
+  $A, B$が$\mathbb{R}$の空でない部分集合で$A \subset B$とする．$B$が上に有界ならば$A$も有界で，\\
+  \[
+  \text{sup}A \le \text{sup}B
+  \]
+  が成り立ち，また$B$が下に有界ならば$A$も下に有界で，\\
+  \[
+  \text{inf}B \le \text{inf}A
+  \]
+\end{prop}
+\begin{proof}
+  $B$が上に有界であるとき，$\forall b \in B, \exists x \in \mathbb{R}, b\le x$でさらに$A \subset B$から$\forall a \in A, a \le x$であることから$A$も上に有界である．\\
+  このことから$A \subset B \Rightarrow U(A) \supset U(B)$.さらに$s=\text{sup}A=\text{Min(sup}A), t=\text{sup}B=\text{Min(sup}B)$とおくと
+  $s$はU$(B)$のすべての元以下である．特に$s \le t$である．よって$\text{sup}A \le \text{sup}B$.\\
+  下に有界の場合も同様.
+\end{proof}
+
+\begin{prop}
+  $\phi \neq A,B \subset \mathbb{R}$に対し，\\
+  \[
+  A+B=\{a+b \mid a \in A, b \in B\}\\
+  AB=\{ab \mid a \in A, b \in B\}
+  \]
+  とする．$A,B$がともに上または下に有界であるときそれぞれ，\\
+
+  \noindent
+  \makebox[3em][l]{\text{(1.13)}}
+  \hfill
+  $\text{sup}(A+B)=\text{sup}A+\text{sup}B, \text{inf}(A+B)=\text{inf}A+\text{inf}B$
+  \hfill\null\noindent\par
+  が成り立つ．また$A,B$がともに$[0, \infty)=\{x \mid x\ge 0\}$の部分集合であるとき，\\
+  \noindent
+  \makebox[3em][l]{\text{(1.14)}}
+  \hfil
+  $\text{sup}(AB)=\text{sup}A\text{sup}B, \text{inf}(AB)=\text{inf}A\text{inf}B$
+  \hfil\null\noindent\par
+  が成り立つ．
+\end{prop}
+\begin{proof}
+  $\forall a \in A, \forall b \in B, a \le \text{sup}A, b \le \text{sup}B$なので，
+  $a+b \le \text{sup}A+\text{sup}B$で，$A,B$が上に有界で
+  $\text{sup}(A+B) \le \text{sup}A+\text{sup}B$.一方$\text{sup}A,\text{sup}B$にいくらでも近い$a,b$が存在するので
+  $\text{sup}(A+B)と\text{sup}A+\text{sup}B$の差は$\forall \epsilon >0$よりも小であり0に等しい((1.5より))．\\
+  同様にして$ab \le \text{sup}A \text{sup}B$で$\text{sup}A\text{sup}B \le \text{sup}(AB)$，$\text{sup}A,\text{sup}B$に
+  いくらでも近い$a,b$が存在するので等号が成り立つ．下限についても同様．
+\end{proof}
+
+
+\subsection*{\S2 実数列の極限}
+\refstepcounter{subsection}
+前述の連続公理から種々の極限の存在が証明される．この説では連続公理は用いず，実数体について述べるが，任意の順序体にも共通する性質のみを扱う．\par
+まず実数列とは，自然数の集合$\mathbb{N}$で定義され，実数値をとる関数に他ならない．また自然数は有限集合の元の個数を表すので，空集合$\phi$の元の個数として
+0を含む．\par
+自然数は，
+\begin{equation*}
+  0, 1, 1+1=2, 2+1=3, 3+1=4, 4+1=5, \dots
+\end{equation*}
+のように0に順次1を加えて得られる実数である．この「順次加えて」を集合論的に言い換えると，次のように定義できる．
+\begin{definition}
+  $\mathbb{R} \supset H$が次の1),2)を満たすとき，$H$を\textbf{継承的}であるという．\par
+  1) $0 \in H$.\par
+  2) $n \in H \Rightarrow n+1 \in H$.\par
+\end{definition}
+今継承的集合全体の集合を$\varGamma$とする．\par
+
+\makebox[3em][l]{\text{(2.1)}}
+\hfil
+$\varGamma \neq \phi$.
+\hfil\par
+例えば，$\mathbb{R}, \mathbb{R}_+=\{x \in \mathbb{R} \mid x \ge 0$\}の二つは継承的である．\par
+
+(2.2) いくつかの(無限個でもよい)継承的集合の共通部分はまた継承的である．
+
+すなわち一つの添字集合$L \neq \phi$の各元$\lambda \in L$に対し一つずつ継承的集合
+$H_\lambda$が対応しているとき，この集合族$(H_\lambda)_{\lambda \in L}$の共通部分\\
+\[
+H=\bigcap_{\lambda \in L}H_\lambda=\{x \mid \text{すべての}\lambda \in L\text{に対して}x \in H_\lambda\}
+\] 
+はまた継承的である．実際継承的集合の定義により，1)すべての$\lambda \in L$に対し
+$0 \in H_\lambda$だから$0 \in H$. 2)$n \in H$ならばすべての$\lambda \in L$に対し$n \in H_\lambda$だから
+$n+1 \in H_\lambda$も成り立ち，よって$n+1 \in H_\lambda$となる．\\
+
+\begin{definition}
+  $\mathbb{R}$のすべての継承的s部分集合に含まれる実数を\textbf{自然数}といい，その全体の集合を$\mathbb{N}$と記す．すなわち
+  \[
+  \mathbb{N}=\bigcap_{H \in \varGamma}H
+  \]
+  である．
+\end{definition}
+
+(2.3) $\mathbb{N}$は最小の継承的集合である．
+
+すなわち，1) $\mathbb{N} \in \varGamma, 2) H \in \varGamma \Rightarrow \mathbb{N} \subset H$が成り立つ．
+実際(2.2)より$\mathbb{N} \in \varGamma$であり，また$\mathbb{N}$の定義から$H \in \varGamma \Rightarrow \mathbb{N} \subset H$である．
+($\mathbb{N}$は＄$\forall H \in \varGamma$に共通な元より成る．(2.3)を言い換えると数学的帰納法の原理となる
+\begin{thm}[数学的帰納法の原理]
+  $\mathbb{N} \supset H \in \varGamma \Rightarrow H=\mathbb{N}$
+\end{thm}
+\begin{proof}
+  仮定から$H$は$\mathbb{N}$の部分集合であるが，(2.3)から$\mathbb{N}$は$H$の部分集合であるので，$H=\mathbb{N}$である．
+\end{proof}
+ \textbf{例1} 自然数$n$についての命題$P(n)$が次の$(\mathrm{i})(\mathrm{ii})$を満たすとき，
+ すべての$n \in \mathbb{N}$に対し$P(n)$は真である：$(\mathrm{i}) P(0)$は真，$(\mathrm{ii}) \forall n \in \mathbb{N}, P(n)が真 \Rightarrow P(n+1)$も真．\\
+実際$P(n)$が真となる$n \in \mathbb{N}$の集合を$H$とすれば，$\mathrm{i})(\mathrm{ii})$により$H$は継承的であるから，Th2.1により$H=\mathbb{N}$である．
+そこで$\forall n \in \mathbb{N}, P(n)$は真である．\\
+
+\textbf{例2}(二項定理) $\forall a,\forall b \in \mathbb{R},\exists n \in \mathbb{N}$に対し
+ \[
+ (a+b)^n=\sum_{k=0}^{n}\binom{n}{k}a^k b^{n-k}
+ \]
+ が成り立つ．ここで$\binom{n}{k}=\frac{n(n-1)\cdots (n-k+1)}{k!}$である($0!=\binom{n}{0}=1$とする).\\
+実際，\textbf{二項係数}$\binom{n}{k}$についての関係
+\begin{align*}
+  \binom{n}{k}+\binom{n}{k-1}&=\frac{n(n-1)\cdots (n-k+1)}{k!}+\frac{n(n-1)\cdots (n-k+2)}{(k-1)!}\\
+  &=\frac{n(n-1)\cdots (n-k+2)}{k!}\cdot ((n-k+1)+k)\\
+  &=\frac{n(n-1)\cdots (n-k+2)}{k!}\cdot (n+1)\\
+  &=\frac{(n+1)n(n-1)\cdots ((n+1)-k+1)}{k!}\\
+  &=\binom{n+1}{k}
+\end{align*}
+を用いれば，$n$についての等式から$n+1$の場合が導かれる．\\
+
+$m \in \mathbb{N}, \mathbb{N}(m)=\{n \in \mathbb{N} \mid n<m\}$と置く．集合$A$から$\mathbb{N}(m)$の上の一対一写像が存在するとき，
+$A$は\textbf{$m$個の元を持つ}という．$\exists m \in \mathbb{N}$に対し，$m$個の元を持つ集合を総称して\textbf{有限集合}という．
+
+(2.4) $\mathbb{N}$の任意の有限部分集合$A \neq \phi$は最小限$\text{min}A$を持つ．
+
+これは$A$の元の個数$m$に対する数学的帰納法による．$m=1でA=\{a\}$のときは$a$が最小限である．
+$m=2$のとき$\mathbb{N}$が全順序集合であることから$\text{min}A$が存在する．$m>1とし，m-1$個の元を持つ集合に対し(2.4)が成り立つと仮定して，
+$m$個の元を持つ$A$を考える．$a \in A$を取り，$A-\{a\}=B$と置くと，帰納法の仮定から$\text{min}B=b$が存在する．このとき$\text{min}\{a,b\}=\text{min}A$を持つ．
+
+\begin{thm}
+  $\phi \neq A \supset \mathbb{N}$は，最小元$\text{min}A$を持つ．
+\end{thm}
+\begin{proof}
+  $m \in A$をとる．\\
+  $A \cup \mathbb{N}(m) = \phi \Rightarrow m=\text{min}A$.\\
+  $A \cup \mathbb{N}(m) \neq \phi \Rightarrow \text{(2.4)より} \text{min}(A \cup \mathbb{N}(m))=n$が存在し，$n=\text{min}A$.
+\end{proof}
+
+\begin{definition}
+  自然数及びそれに負号をつけたものを\textbf{整数}という．整数全体の集合を$\mathbb{Z}$と記す．二つの整数の商としてあらわされる実数を
+  \textbf{有理数}といい，その全体の集合(有理数体)を$\mathbb{Q}$と記す．
+\end{definition}
+$\mathbb{Z}=\{\pm n \mid n \in \mathbb{N}\}, \mathbb{Q}=\{\frac{n}{m} \mid n,m \in \mathbb{Z},m \neq 0\}.$
+
+\begin{definition}
+  $\mathbb{N}\text{から}\mathbb{R}$への写像を\textbf{（実）数列}という．この写像による$n \in \mathbb{N}$の像を$a_n$と記し，
+  数列を$(a_n)_{n \in \mathbb{N}}$で表す．$a_n$をこの数列の\textbf{第n項}という．
+\end{definition}
+
+\textbf{例3} $a_n=(-1)^n.$
+
+\textbf{例4} 「$b_n=$小さいほうから数えて$n+1$番目の素数」によって数列$(b_n)_{n \in \mathbb{N}}$が定まる．
+素数が無限に存在するから．
+
+次に数列$(a_n)_{n \in \mathbb{N}}$の極限が$a$であることを定義する．
+ふつうこれは「$n$を限りなく大きくするとき，$a_n$が$a$にいくらでも近づく」ことであるとされている．これを正確に言い表す．
+先ず$a_n$が$a$にいくらでも近づくとは，$a$と$a_n$の距離$|a^a_n|$がいくらでも小になることを意味する．
+すなわちどんな小さな$\epsilon > 0$をとっても十分大きなすべての$n$に対し$|a-a_n|<\epsilon$となるということをいう．
+
+\begin{definition}
+  実数列$(a_n)_{n \in \mathbb{N}}$が実数$a$に\textbf{収束する}とは，どんな正数$\epsilon > 0$に対しても，
+  $\exists n_0 \in \mathbb{N},n_0 \le \forall n \in \mathbb{N},|a-a_n|<\epsilon$となることをいう．
+  このとき$a$は$(a_n)_{n \in \mathbb{N}}$の\textbf{極限}であるといい，\\
+  $a=\lim_{n \to \infty} a_n \text{または} a_n \rightarrow a（n\rightarrow \infty）$\\
+  と記す．数列が収束しないことを\textbf{発散する}ともいう．
+\end{definition}
+
+論理記号で表せば$a=\lim_{n \rightarrow \infty} a_n$とは\\
+\begin{align*}
+  (\forall \epsilon >0)(\exists n_0 \in \mathbb{N})(\forall n \in \mathbb{N})(n \ge n_0 \Rightarrow |a-a_0|<\epsilon)
+\end{align*}
+が成り立つことをいう．
+
+$\forall a \in \mathbb{R},\forall \epsilon >0$に対し．
+\begin{align*}
+  U(a,\epsilon) &= \{x \in \mathbb{R} \mid |a-x|<\epsilon\}\\
+  &=\{x \in \mathbb{R} \mid a-\epsilon <x<a+\epsilon\}
+\end{align*}
+を$a$の$\epsilon\textbf{近傍}$という．上の定義を言い換えれば次のようになる．
+
+ (2.5) $a=\lim_{n \rightarrow \infty} a_n \iff  \forall \epsilon > 0$に対し，
+有限個を除く$\forall n \in \mathbb{N}$に対し$a_n \in U(a,\epsilon)$となる．
+
+このことから$(a_n)_{n \in \mathbb{N}}$の有限個の項を取り換えても収束する，
+しないには関係せず，また収束する場合にはその極限値も変わらないことがわかる．
+
+ (2.6) 二つの数列$(a_n)_{n \in \mathbb{N}},(b_n)_{n \in \mathbb{N}}$において，
+ 有限個の$n$に対する項のみが異なるとき，その二つの数列は同時に収束または発散し，収束するときは極限も一致する．
+
+\textbf{例5} $\lim_{n \rightarrow \infty} \frac{1}{n} = 0$.
+$a_n=\frac{1}{n}$とすると，$a_0$は定義されていないがどう定義しても極限には関係しない．$\forall \epsilon>0$に対し，
+自然数$n_0$を$n_0>\frac{1}{\epsilon}$となるように選べば，このとき$n\ge n_0$ならば，
+\begin{equation*}
+  0<\frac{1}{n}\le \frac{1}{n_0}<\epsilon
+\end{equation*}
+となるため，$\lim_{n \rightarrow \infty} \frac{1}{n}=0$.
+
+\textbf{例6} $0 \le x < 1 \Rightarrow \lim_{n \rightarrow \infty} x^n =0$.
+$x=0$ならば自明のため$x \neq 0$とする．$y=\frac{1}{x}$とおく．（$\lim_{n \rightarrow \infty} (\frac{1}{y})^n = 0$を示せばよい．）
+$y>1$のため$y=1+h (h>0)$とおける．また$y^n = (1+h)^n = 1+nh+\cdots > nh.$いま$\forall \epsilon >0$に対し，$n_0=\frac{1}{\epsilon h}$と置けば，$n \ge n_0$ならば
+\begin{align*}
+  0 < x^n =(\frac{1}{y})^n < \frac{1}{nh} < \frac{1}{n_{0}h} <\epsilon (0 < x < 1)
+\end{align*}
+である．
+
+\textbf{例7} $x>1 \Rightarrow \lim_{n \rightarrow \infty} \frac{n}{x^n} = 0.$
+$x=1+h,h>0$であるので，$n \ge 2$で$x^n=(1+h)^n=1+nh+\frac{n(n-1)}{2}h^2+\cdots>\frac{n(n-1)}{2}h^2$.
+$\forall \epsilon >0$に対し，$n_0=1+\frac{2}{\epsilon h^2}$と置くと，$n \le n_0$に対し
+\begin{align*}
+  \frac{n}{x^n} < \frac{2}{(n-1)h^2} < \frac{2}{(n_0-1)h^2} =\epsilon
+\end{align*}
+となる．
+
+\begin{prop}
+  数列$(a_n)_{n \in \mathbb{N}}$の極限は存在するとすればただ一つである．
+\end{prop}
+\begin{proof}
+  $a \neq b$である二つの実数がともに数列の極限であると仮定する．このとき$|a-b|=2\epsilon$とする．
+  $\epsilon > 0$なので$\exists n_0,n_1 \in \mathbb{N}$,
+  \begin{align*}
+    n &\ge n_0 \Rightarrow |a-a_n|<\epsilon \\
+    n &\ge n_1 \Rightarrow |b-a_n|<\epsilon
+  \end{align*}
+  が成り立ち，そこで$n = \text{Max}(n_0,n_1)$とすれば$2\epsilon =|a-b| \le |a-a_n|+|b-a_n| <\epsilon + \epsilon=2\epsilon$
+  となる．$2\epsilon<2\epsilon$となり矛盾するため数列の極限はただ一つ．
+\end{proof}
+
+数列$(a_n)_{n \in \mathbb{N}}$が\textbf{上（下）に有界}または\textbf{有界}とは，その項の作る集合が上（下）に有界であることをいう．
+
+\begin{prop}
+  収束する数列$(a_n)_{n \in \mathbb{N}}$は有界である．
+\end{prop}
+\begin{proof}
+  $a$が数列の極限値であるとすれば$1>0$に対し，$n_0 \in \mathbb{N}$が存在し
+  \begin{align*}
+    n \ge n_0 \Rightarrow a-1<a_n<a+1
+  \end{align*}
+  が成り立つ．そこでいま
+  \begin{align*}
+    M=\text{Max}\{|a_0|,|a_1|,\cdots,|a_{n-1}|,|a_n|\}
+  \end{align*}
+  このとき$\forall n \in \mathbb{N},a_n \le M.$
+\end{proof}
+
+\begin{thm}
+  $\lim_{x \rightarrow \infty} a_n=a,\lim_{x \rightarrow \infty} b_n=b$が存在するとき，
+  数列$(a_n + b_n)_{n \in \mathbb{N}},(a_n - b_n)_{n \in \mathbb{N}},(a_n b_n)_{n \in \mathbb{N}},(\frac{a_n}{b_n})_{n \in \mathbb{N}}$
+  も収束して次の等式が成り立つ．
+  \begin{enumerate}[label={\arabic*}),itemsep=1em]
+    \item $\lim_{n \rightarrow \infty} (a_n \pm b_n)=a \pm b.\text{(複合同順)}$
+    \item $\lim_{n \rightarrow \infty} (a_n b_n)=ab.$
+    \item $\lim_{n \rightarrow \infty} \frac{a_n}{b_n}=\frac{a}{b}. (b \neq 0)$
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  \begin{enumerate}[label={\arabic*}),itemsep=1em]
+    \item \begin{align*}
+      |(a \pm b) - (a_n \pm b_n)| \le |a-a_n|+|b-b_n|
+    \end{align*}
+    で右辺は両方$\forall \epsilon > 0$に対し，十分大きな$n_0$が存在し$n \ge n_0$となるとき$\frac{\epsilon}{2}$より小となることから1)が成り立つ．
+    \item $a_n,b_n$は収束するためTh2.4より$a_n,b_n$は有界で，ある正数$M$が存在し$\forall n \in \mathbb{N}$に対し，
+    \begin{align*}
+     |a_n| \le M,|b_n| \le M
+    \end{align*}
+    が成り立ち，
+    \noindent
+    \makebox[0pt][l]{\text{(2.7)}}
+    \hspace{4em}
+    \begin{minipage}{\textwidth}
+      \[
+      \begin{aligned}
+        |ab-a_n b_n|&=|ab-ab_n+b_n a-a_n b_n|\\
+        &\le |a(b-b_n)|+|b_n(a-a_n)|\\
+        &\le |a(b-b_n)|+M|(a-a_n)|
+      \end{aligned}
+      \]
+    \end{minipage}
+    さらに$\forall \epsilon >0$に対し，$\exists n_0 \in \mathbb{N}$が存在し
+    \noindent
+    \makebox[0pt][l]{\text{(2.8)}}
+    $n \ge n_0 \Rightarrow |a-a_n|<\frac{\epsilon}{2M},|b-b_n|<\frac{\epsilon}{2(|a|+1)}$
+    が成り立ち，$n \ge n_0 \Rightarrow |ab-a_n b_n|<\epsilon$
+    \item ここで$\lim_{n \rightarrow \infty} \frac{1}{b_n}=\frac{1}{b}$が成り立てば2)を用いて示せる．
+    $|\frac{1}{b}-\frac{1}{b_n}|=\frac{|b-b_n|}{|bb_n|}.$またある$n_1$以上のすべての$n$に対し，
+    $\frac{1}{2}|b|>|b-b_n| \ge |b|-|b_n| \Rightarrow |b_n| > \frac{1}{2}|b|.$このことから
+    \begin{align*}
+      |\frac{1}{b}-\frac{1}{b_n}|<\frac{2|b-b_n|}{|b|^2}
+    \end{align*} 
+    さらに$\lim_{n \rightarrow \infty} b_n=b$から$\forall \epsilon>0$に対し，ある$n_2$が存在し$n \ge n_2$なら
+    \begin{align*}
+      |b-b_n| \le \frac{|b|^2}{2}\epsilon
+    \end{align*}
+    となる．そこで$n \ge n_0=\text{Max}{(n_1,n_2)}$とするなら
+    \begin{align*}
+      |\frac{1}{b}-\frac{1}{b_n}|<\epsilon
+    \end{align*}
+  \end{enumerate}
+\end{proof}
+
+\textbf{例8} $\lim_{n \rightarrow \infty} \frac{n^2 -n+4}{2n^2 -1}=
+\lim_{n \rightarrow \infty} \frac{1-\frac{1}{n}+\frac{4}{n^2}}{2-\frac{1}{n^2}}=\frac{1}{2}.$\\
+このときTh2.5をもちいた
+
+Th2.5は数列の極限をとる操作と四則演算の順序を交換してもよいことを示す．これは実数体における四則演算が連続であることを示す．\\
+また$\mathbb{R}$における順序と極限の関係を考えると，大小の順序が極限をとる操作で保たれることがわかる．
+
+\begin{thm}
+  数列$a_n,b_n$がそれぞれ$a,b$に収束するとき$\forall n \in \mathbb{N}$に対し，\\
+  \makebox[3em][l]{\text{(2.9)}}
+  \hfil
+  $a_n \le b_n$.
+  \hfil\par
+  が成り立つならば，$a\le b.$
+\end{thm}
+\begin{proof}
+  $a>b$を仮定する．$a-b=2\epsilon$と置くと十分大きな$n$に対し
+  \begin{align*}
+    |a-a_n|<\epsilon,|b-b_n|<\epsilon
+  \end{align*}
+  が成り立つ．
+  \begin{align*}
+    b_n<b+\epsilon=a-\epsilon<a_n
+  \end{align*}
+  これは(2.9)に反する．
+\end{proof}
+
+\textbf{注意1} (2.9)はある$n_0$よりもすべて大きい$n$に対して成り立つとしても結論は成り立つ．
+
+\textbf{注意2} (2.9)の代わりに$a_n<b_n,n \in \mathbb{N}$であっても$a<b$とは限らない．
+
+\textbf{例9} $a_n=0<b_n=\frac{1}{n}$だがこの時それぞれの極限値$a=b=0.$
+
+\addtocounter{thm}{-1}
+\begin{thmcor}
+  $\forall n,a_n \le c \Rightarrow a=\lim_{n \rightarrow \infty} a_n \le c$である．
+  またすべての$n$に対し$d \le a_n \Rightarrow d \le a.$
+\end{thmcor}
+\begin{proof}
+  Th2.6の$b_n=c$または$b_n=d$とすると成り立つ．
+\end{proof}
+
+\begin{prop}{はさみうちの原理}
+  数列$(a_n)_{n \in \mathbb{N}},(b_n)_{n \in \mathbb{N}}$がともに$a$に収束し，
+  $\forall n \in \mathbb{N},a_n \le b_n$を満たしているとする．いま数列$(c_n)_{n \in \mathbb{N}}$が$\forall n \in \mathbb{N}$
+  \begin{align*}
+    a_n \le c_n \le b_n
+  \end{align*}
+  を満たすならば，$(c_n)_{n \in \mathbb{N}}$も$a$に収束する．
+\end{prop}
+\begin{proof}
+  仮定から
+  \begin{align*}
+    \forall \epsilon >0,\exists n_0 \in \mathbb{N},n \ge n_0 \Rightarrow |a-a_n|<\epsilon,|a-b_n|<\epsilon
+  \end{align*}
+  このとき$n \ge n_0$ならば
+  \begin{align*}
+    a-\epsilon <a_n \le c_n \le b_n <a+\epsilon \Rightarrow |a-c_n|<\epsilon
+  \end{align*}
+  であるので$c_n$は$a$に収束する
+\end{proof}
+
+\textbf{例10} 数列$(c_n)_{n \in \mathbb{N}}$が$0 \le c_n <\frac{1}{n}$をすべての$n\ge 1$に対して満たすならば
+$\lim_{n \rightarrow \infty} c_n=0.$これはProp2.7と例５から明らか．
+
+\[
+\textbf{問 題}
+\]
+\begin{enumerate}[label={\arabic*}),itemsep=1em]
+  \item 第n項$a_n$が次の式で与えられる数列の極限を求めよ
+  \begin{enumerate}[label=({\roman*}),itemsep=1pt,parsep=0pt]
+    \item $\frac{a^n}{n!}をa$の値で場合分けする．\\
+    $
+  \end{enumerate}
+  \item $x \in \mathbb{R},f(x)=\lim_{n \rightarrow \ty} (\lim_{m \rightarrow \infty} (\cos(n!\pi x))^{2m})$を求める
+  \item $\lim_{n \rightarrow \infty} a_n=a$が存在するとき
+  \begin{align*}
+    \lim_{n \rightarrow \infty} \frac{a_1 +a_2 + \cdots a_n}{n}=a
+  \end{align*}
+  を示す
+  \item 正数列$(a_n)_{n \in \mathbb{N}}$に対して，$\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}=a$が存在すれば，
+  $\lim_{n \rightarrow \infty} \sqrt[n]{a_n}=a$であることを示す．
+  \item $\mathbb{N}\in m \ge 1,a \subset \mathbb{N},\text{イ)}m=\text{min}A,\text{ロ)}n\in A,n\ge m\Rightarrow n+1 \in A$
+  を満たすなら$A=\{n \in \mathbb{N} \mid n \ge m\}$であることを示す．
+  \item $m,n \in \mathbb{N} \Rightarrow m+n,mn,m-n \in \mathbb{N} (m \ge n)$を示す．
+  \item $n \in \mathbb{N} \Rightarrow n<k<n+1$となる自然数$k$は存在しないことを示す．
+\end{enumerate}
+
+\end{document}
