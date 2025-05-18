@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-n=int(input())
-a=[int(i) for i in input().split(' ')]
-res=0
+n = int(input())
+a = [int(i) for i in input().split(' ')]
+
+left = set([])
+right = set([])
+numl = []
+numr = []
 for i in range(n-1):
-    num1=len(set(a[:i+1]))
-    num2=len(set(a[i+1:]))
-    # print(a[:i],a[i+1:], num1, num2)
-    if num1+num2>=res:
-        res=num1+num2
-=======
-n=int(input())
-a=[int(i) for i in input().split(' ')]
-res=0
+    left.add(a[i])
+    right.add(a[n-1-i])
+    numl.append(len(left))
+    numr.append(len(right))
+# print(numl, numr)
+ans = 0
 for i in range(n-1):
-    num1=len(set(a[:i+1]))
-    num2=len(set(a[i+1:]))
-    # print(a[:i],a[i+1:], num1, num2)
-    if num1+num2>=res:
-        res=num1+num2
->>>>>>> 660d0d0f24734efffae7e8823a1955937c02e1a1
-print(res)
+    ans = max(ans, numl[i]+numr[n-2-i])
+print(ans)

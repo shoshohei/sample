@@ -729,8 +729,7 @@ $\lim_{n \rightarrow \infty} c_n=0.$これはProp2.7と例５から明らか．
 \begin{enumerate}[label={\arabic*}),itemsep=1em]
   \item 第n項$a_n$が次の式で与えられる数列の極限を求めよ
   \begin{enumerate}[label=({\roman*}),itemsep=1pt,parsep=0pt]
-    \item $\frac{a^n}{n!}をa$の値で場合分けする．\\
-    $
+    \item $\frac{a^n}{n!}をa$の値で場合分けする．
   \end{enumerate}
   \item $x \in \mathbb{R},f(x)=\lim_{n \rightarrow \ty} (\lim_{m \rightarrow \infty} (\cos(n!\pi x))^{2m})$を求める
   \item $\lim_{n \rightarrow \infty} a_n=a$が存在するとき
@@ -745,5 +744,21 @@ $\lim_{n \rightarrow \infty} c_n=0.$これはProp2.7と例５から明らか．
   \item $m,n \in \mathbb{N} \Rightarrow m+n,mn,m-n \in \mathbb{N} (m \ge n)$を示す．
   \item $n \in \mathbb{N} \Rightarrow n<k<n+1$となる自然数$k$は存在しないことを示す．
 \end{enumerate}
+
+
+\begin{align}
+  \epsilon_g &= \int P(u, v) \cdot \epsilon(u,v)du dv \\
+  &= \int dudv P(u,v)\Theta(-uv) \tha (\because \epsilon = |u-v|) \\
+  &= \int_0^\infty du \int_{-\infty}^0 dvP(u,v) + \int_{-\infty}^0 du \int_0^\infty dv P(u,v) (\because u,v\text{どちらかが負の場合だけ発火}) \\
+  &= \int_0^\infty du \int_{-\infty}^0 dvP(u,v) + \int_{\infty}^0 (-du) \int_0^{-\infty} (-dv)P(-u,-v) (\because u' = -u, v' = -v) \\
+  &= \int_0^\infty du \int_{-\infty}^0 dvP(u,v) + \int_{\infty}^0 du \int_0^{-\infty} dv P(u,v) \\
+  &= 2\int_0^\infty du \int_{-\infty}^0 dv P(u,v) \\
+  &= 2\codt \frac{1}{2\pi \sqrt{1-R^2}} \int_0^\infty du \int_{-\infty}^0 dv \exp(-\frac{u^2+v^2 2Ruv}{2(1-R^2)}) \\
+  &= \frac{1}{\pi \sqrt{1-R^2}} \int _0^\infty du \int_{-\infty}^0 dv \exp(-\frac{u^2 + (v-Ruv)^2 -R^2 u^2}{2(1\R^2)}) (\because u\text{のみの項を作りたい}) \\
+  &= \frac{1}{\pi \sqrt{1-R^2}} \int_0^\infty du \exp(-\frac{u^2}{2}) \int_{-\infty}^0 dv \exp(-\frac{(v-Ru)^2}{2(1-R^2)}) \\
+  &= \frac{1}{\pi \sqrt{1-R^2}} \int_0^\infty du \exp(-\frac{u^2}{2}) \int_{-\infty}^{-Ru} dw \exp(-\frac{w^2}{2(1-R^2)})\\
+  &(\because w = v-Ru, dw = dv(u\text{は定数とみなせる}), v \to 0 \Rightarrow w \to -Ru)\\
+  &= a
+\end{align}
 
 \end{document}
