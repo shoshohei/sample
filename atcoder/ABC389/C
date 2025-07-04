@@ -22,4 +22,4 @@ for i in range(q):
     elif q_[0]==3:
         id = start + q_[1]-1
         print(head_ls[id]-geta)
-    print(head_ls, teal_ls, start, geta)
+    # print(head_ls, teal_ls, start, geta)
