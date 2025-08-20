@@ -1,0 +1,133 @@
+\documentclass{ltjsarticle}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{bm}
+
+\begin{document}
+\begin{enumerate}
+  \item[設問2] 財布の中に 1,800円が入っていて、1個200円のパンと1本150円のジュースを組み合わせて購入した
+  い。パンの購入量をx、ジュースの購入量をyで表すとする。横軸にx、縦軸にyをとって予算制約線を図に描くと、
+  傾きはいくらになるか。
+  \begin{align*}
+    1800 &\ge 200\cdot x + 150\cdot y \\
+    y &\le 12 - \frac{4}{3}x  
+  \end{align*}
+  傾きは$-\frac{4}{3}$，答えは①
+
+  \item [設問5, 6] $\pi = -x^2+40x$．利潤$\pi$が最大となる$x$は
+  \begin{align*}
+    \pi &= -(x^2-40x) \\
+    &= -(x^2-40x+400)+400 \\
+    &= -(x-20)^2+400 
+  \end{align*}
+  $x=20$で$\pi$は最大値400をとる．
+
+  \item [設問7] ④負の相関なら負の傾きで右肩下がり
+  
+  \item [設問8]
+  \begin{align*}
+    8^{-\frac{5}{6}} &= (2^3)^{-\frac{5}{6}} \\
+    &= 2^{-\frac{5}{6}\cdot 3} \\
+    &= 2^{-\frac{5}{2}} \\
+    &= \frac{1}{2}^{2+\frac{1}{2}} \\
+    &= \frac{1}{4}\cdot \frac{1}{\sqrt{2}} \\
+    &= \frac{\sqrt{2}}{8}
+  \end{align*}
+  答えは①
+
+  \item [設問9]  現金10万円を毎年10\%の複利で銀行に預けるとする。このとき2年後の預金残高はいくらになるか。
+  預けた10万が1年後には11万$=10\cdot 1.1$，2年後には12.1万$=11\cdot 1.1$答えは③
+
+  \item [設問10] 
+  \begin{align*}
+    (\log_3 25^2 - \log_3 5) \times (\log_3 5 + \log_3 \frac{1}{5}) &= (\log_3 5^4 - \log_3 5) \times (\log_3 5 + \log_3 5^{-1}) \\
+    &= 3\log_3 5 \cdot 0 \\
+    &= 0
+  \end{align*}
+  答えは⑤
+
+  \item [設問11] ある年のGDPを$X$とする．3年後のGDPを$Y$とすると$Y=1.05 \cdot 0.97 \cdot 1.01　X$．成長率は$(\frac{Y}{X})^{\frac{1}{3}}-1$．答えは①
+  \item [設問12] 一般項は$a_n = 4 \cdot (\frac{1}{3})^{n-1}$．$n$項までの総和$S_n$は
+  \begin{align*}
+    S_N &= 4\frac{1-(\frac{1}{3})^n}{1-\frac{1}{3}} \\
+    &= 6\cdot (1-(\frac{1}{3})^n)
+  \end{align*}
+  上で求めた$S_n$の極限をとる．
+  \begin{align*}
+    \lim_{n\to \infty} S_n &= \lim_{n\to \infty} 6\cdot (1-(\frac{1}{3})^n) \\
+    &= 6
+  \end{align*}
+  答えは②
+
+  \item [設問14] 
+  \begin{align}
+    y' &= \frac{dy}{dx} \\
+    &= -\frac{1}{2\sqrt{x}} \\
+    y'(2) &= -\frac{1}{2\sqrt{2}} \\
+    &= -\frac{\sqrt{2}}{4}
+  \end{align}
+  答えは③
+
+  \item [設問15]
+  \begin{align*}
+    y' &= x^2+-3x+2 \\
+    y' &= 0 \\
+    x^2+-3x+2 &= 0 \\
+    (x-2)(x-1) &= 0 \\
+    x &= 1, 2
+  \end{align*}
+  答えは②
+
+  \item [設問17]
+  a) 中央値は10番目と11番目の生徒の間．二人とも70~79の点数なのでaは正しい．\\
+  b) 60以上の生徒は17人なので正しくない．\\
+  答えは①
+
+  \item [設問18-22]
+  \begin{align*}
+    \bar{X} &= (2+3+4+3)/4 =3 \\
+    \bar{Y} &= (3+2+5+6)/4 =4
+  \end{align*}
+  偏差は($x$の数値-$x$の平均)．19の答えは④
+  \begin{align}
+    \sigma^{2}_{x} &= \frac{(-1)^2+0^2+1^2+0^2}{4}\\
+    &= 1/2
+  \end{align}
+  \begin{align}
+    \sigma^{2}_{y} &= \frac{(-1)^2+(-2)^2+1^2+2^2}{4}\\
+    &= 5/2
+  \end{align}
+  
+  20の答えは①
+  \begin{align}
+    \sigma^{2}_{xy} &= \frac{(-1)(-1)+0\cdot (-2)+1\cdot 1+ 0\cdot 2}{4}\\
+    &= 1/2
+  \end{align}
+  21の答えは③\\
+  相関係数$r$は
+  \begin{align}
+    r&= \frac{\sigma^{2}_{xy}}{\sqrt{\sigma^{2}_{y}}\cdot \sqrt{\sigma^{2}_{y}}} \\
+    &= \frac{1/2}{\sqrt{\frac{5}{4}}} \\
+    &= \frac{1}{\sqrt{5}} >0
+  \end{align}
+  22の答えは①
+
+  \item [設問23] 2以下の目が出る確率は$\frac{1}{3}$．これがに連続で出る確率は$\frac{1}{9}$
+  
+  \item [設問24] 一回以上1の目が出る場合は，(1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(2,1),(3,1),(4,1),(5,1).$\frac{11}{36}$
+
+  \item [設問25] $3\cdot 0.4 + 1 \cdot 0.3 + 0\cdot 0.3 = 1.5$
+\end{enumerate}
+
+24L, 5% 
+\begin{align}
+  24 + x:x &= 100:5 \\
+  20x &= 24+x\\
+  19x &= 24\\
+  x &= 24/19
+\end{align}
+
+\end{document}
