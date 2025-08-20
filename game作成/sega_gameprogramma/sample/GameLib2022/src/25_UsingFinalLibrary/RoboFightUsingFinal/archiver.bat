@@ -1,1 +1,0 @@
-.\Archiver.exe -v data
