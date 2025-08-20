@@ -27,7 +27,7 @@ private:
 	void UpdateGame();
 	void GenerateOutput();
 	void LoadData();
-	void UnLoadData();
+	void UnloadData();
 
 	std::unordered_map <std::string, SDL_Texture*> mTextures;
 	std::vector<class Actor*> mActors;
@@ -36,12 +36,10 @@ private:
 
 	SDL_Window* mWindow;
 	SDL_Renderer* mRenderer;
-	Uint32 mTicksConunt;
+	Uint32 mTicksCount;
 	bool mIsRunning;
 	bool mUpdatingActors;
 
-	int mWindowHeight;
-	int mWindowWidth;
 
 	std::vector<class Enemy*> mEnemies;
 	class Grid* mGrid;

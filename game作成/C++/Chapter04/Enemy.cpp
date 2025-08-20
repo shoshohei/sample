@@ -14,6 +14,11 @@ Enemy::Enemy(Game* game)
 	SpriteComponent* sc = new SpriteComponent(this);
 	sc->SetTexture(game->GetTexture("Assets/Airplane.png"));
 
+	SetPosition(GetGame()->GetGrid()->GetStartTile()->GetPosition());
+	// Setup a nav component at the start tile
+	NavComponent* nc = new NavComponent(this);
+	nc->SetForwardSpeed(150.0f);
+	nc->StartPath(GetGame()->GetGrid()->GetStartTile());
 
 
 

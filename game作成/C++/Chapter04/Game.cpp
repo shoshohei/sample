@@ -14,8 +14,6 @@ Game::Game()
 	, mRenderer(nullptr)
 	, mIsRunning(true)
 	, mUpdatingActors(false)
-	,mWindowHeight(768)
-	,mWindowWidth(1024)
 {
 
 }
@@ -25,7 +23,7 @@ bool Game::Initialize() {
 		SDL_Log("SDL Error : %s", SDL_GetError());
 		return false;
 	}
-	mWindow = SDL_CreateWindow("chapter4", 0, 0, mWindowWidth, mWindowHeight, 0);
+	mWindow = SDL_CreateWindow("chapter4", 0, 0, 1024, 768, 0);
 	if (!mWindow) {
 		SDL_Log("SDL Error : %s", SDL_GetError());
 		return false;
@@ -41,9 +39,9 @@ bool Game::Initialize() {
 	}
 
 	LoadData();
-	mTicksConunt = SDL_GetTicks();
+	mTicksCount = SDL_GetTicks();
 
-	return false;
+	return true;
 }
 
 void Game::RunLoop() {
@@ -55,7 +53,7 @@ void Game::RunLoop() {
 }
 
 void Game::Shutdown() {
-	UnLoadData();
+	UnloadData();
 	IMG_Quit();
 	SDL_DestroyRenderer(mRenderer);
 	SDL_DestroyWindow(mWindow);
@@ -74,13 +72,13 @@ void Game::AddActor(Actor* actor) {
 void Game::RemoveActor(Actor* actor) {
 	auto iter = std::find(mPendingActors.begin(), mPendingActors.end(), actor);
 	if (iter != mPendingActors.end()) {
-		std::iter_swap(iter, mPendingActors.end());
+		std::iter_swap(iter, mPendingActors.end()-1);
 		mPendingActors.pop_back();
 	}
 
 	iter = std::find(mActors.begin(), mActors.end(), actor);
 	if (iter != mActors.end()) {
-		std::iter_swap(iter, mActors.end());
+		std::iter_swap(iter, mActors.end()-1);
 		mActors.pop_back();
 	}
 }
@@ -139,15 +137,30 @@ void Game::ProcessInput() {
 	if (keyState[SDL_SCANCODE_ESCAPE]) {
 		mIsRunning = false;
 	}
+	if (keyState[SDL_SCANCODE_B]) {
+		mGrid->BuildTower();
+	}
+
+	int x, y;
+	Uint32 buttons = SDL_GetMouseState(&x, &y);
+	if (SDL_BUTTON(buttons) & SDL_BUTTON_LEFT) {
+		mGrid->ProcessClick(x, y);
+	}
+	mUpdatingActors = true;
+	for (auto actor : mActors)
+	{
+		actor->ProcessInput(keyState);
+	}
+	mUpdatingActors = false;
 }
 
 void Game::UpdateGame() {
-	while (!SDL_TICKS_PASSED(SDL_GetTicks(),  mTicksConunt+16));
-	float deltaTime = (SDL_GetTicks() - mTicksConunt)/1000.0f;
+	while (!SDL_TICKS_PASSED(SDL_GetTicks(),  mTicksCount+16));
+	float deltaTime = (SDL_GetTicks() - mTicksCount)/1000.0f;
 	if (deltaTime > 0.05f) {
 		deltaTime = 0.05f;
 	}
-	mTicksConunt = SDL_GetTicks();
+	mTicksCount = SDL_GetTicks();
 
 	mUpdatingActors = true;
 	for (auto actor : mActors) {
@@ -173,7 +186,7 @@ void Game::UpdateGame() {
 }
 
 void Game::GenerateOutput() {
-	SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 0);
+	SDL_SetRenderDrawColor(mRenderer, 128, 0, 16, 0);
 	SDL_RenderClear(mRenderer);
 	for (auto s : mSprites) {
 		s->Draw(mRenderer);
@@ -186,7 +199,7 @@ void Game::LoadData() {
 	mGrid = new Grid(this);
 }
 
-void Game::UnLoadData() {
+void Game::UnloadData() {
 	while (!mActors.empty()) {
 		delete mActors.back();
 	}
