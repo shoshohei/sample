@@ -1,0 +1,108 @@
+﻿  main_.cpp
+main_.obj : error LNK2005: "void __cdecl readFile(char * *,int *,char const *)" (?readFile@@YAXPAPADPAHPBD@Z) は既に main.obj で定義されています。
+main_.obj : error LNK2005: "public: void __thiscall GameLib::Framework::update(void)" (?update@Framework@GameLib@@QAEXXZ) は既に main.obj で定義されています。
+GameLib_d.lib(MemoryManager.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Framework.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(DebugStream.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(FileIOManager.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Halt.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(WindowCreator.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(InputManaegr.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(SoundManager.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(GraphicsManager.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Texture.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(vector2.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(StringRenderer.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Font.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(ThreadingFunctions.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(ThreadingManager.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Mutex.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(RefString.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(OStringStream.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Thread.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Event.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Compressor.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Joystick.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(MathFunctions.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Matrix44.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Matrix34.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(VertexBuffer.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(IndexBuffer.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(InFile.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Vector4.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Vector3.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Element.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Attribute.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(PrimitiveRenderer.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Semaphore.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(DocumentImpl.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+GameLib_d.lib(Tag.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: bool __thiscall std::codecvt_base::always_noconv(void)const " (?always_noconv@codecvt_base@std@@QBE_NXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::in(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const " (?in@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::out(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const " (?out@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::unshift(struct _Mbstatet &,char *,char *,char * &)const " (?unshift@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PAD1AAPAD@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: static unsigned int __cdecl std::codecvt<char,char,struct _Mbstatet>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: bool __thiscall std::ios_base::operator!(void)const " (??7ios_base@std@@QBE_NXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::basic_streambuf<char,struct std::char_traits<char> >(void)" (??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: virtual __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::~basic_streambuf<char,struct std::char_traits<char> >(void)" (??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::locale __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::getloc(void)const " (?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QBE?AVlocale@2@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::eback(void)const " (?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gptr(void)const " (?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pptr(void)const " (?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::egptr(void)const " (?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gbump(int)" (?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setg(char *,char *,char *)" (?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::epptr(void)const " (?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gndec(void)" (?_Gndec@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gninc(void)" (?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gnavail(void)const " (?_Gnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBE_JXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pbump(int)" (?pbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Pninc(void)" (?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Pnavail(void)const " (?_Pnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBE_JXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Init(void)" (?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXXZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Init(char * *,char * *,int *,char * *,char * *,int *)" (?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAPAD0PAH001@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64)" (?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64)" (?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: virtual __thiscall std::basic_ios<char,struct std::char_traits<char> >::~basic_ios<char,struct std::char_traits<char> >(void)" (??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __thiscall std::basic_ios<char,struct std::char_traits<char> >::basic_ios<char,struct std::char_traits<char> >(void)" (??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: __thiscall std::basic_istream<char,struct std::char_traits<char> >::basic_istream<char,struct std::char_traits<char> >(class std::basic_streambuf<char,struct std::char_traits<char> > *,bool)" (??0?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: virtual __thiscall std::basic_istream<char,struct std::char_traits<char> >::~basic_istream<char,struct std::char_traits<char> >(void)" (??1?$basic_istream@DU?$char_traits@D@std@@@std@@UAE@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_istream<char,struct std::char_traits<char> > & __thiscall std::basic_istream<char,struct std::char_traits<char> >::read(char *,__int64)" (?read@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEAAV12@PAD_J@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_istream<char,struct std::char_traits<char> > & __thiscall std::basic_istream<char,struct std::char_traits<char> >::seekg(__int64,int)" (?seekg@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEAAV12@_JH@Z) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::fpos<struct _Mbstatet> __thiscall std::basic_istream<char,struct std::char_traits<char> >::tellg(void)" (?tellg@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE?AV?$fpos@U_Mbstatet@@@2@XZ) は既に GameLib_d.lib(FileIOManager.obj) で定義されています。
+libcpmtd.lib(locale0.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(locale0.obj) : error LNK2005: "void __cdecl std::_Facet_Register(class std::_Facet_base *)" (?_Facet_Register@std@@YAXPAV_Facet_base@1@@Z) は既に msvcprtd.lib(locale0_implib.obj) で定義されています。
+libcpmtd.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ) は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Init(bool)" (?_Init@locale@std@@CAPAV_Locimp@12@_N@Z) は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_ctor(class std::_Locinfo *,char const *)" (?_Locinfo_ctor@_Locinfo@std@@SAXPAV12@PBD@Z) は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_dtor(class std::_Locinfo *)" (?_Locinfo_dtor@_Locinfo@std@@SAXPAV12@@Z) は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(locale.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(iosptrs.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(wlocale.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xlocale.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xstol.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xstoul.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xstoll.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xstoull.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xlock.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xlock.obj) : error LNK2005: "public: __thiscall std::_Lockit::_Lockit(int)" (??0_Lockit@std@@QAE@H@Z) は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(xlock.obj) : error LNK2005: "public: __thiscall std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QAE@XZ) は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(xstrcoll.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xdateord.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xmbtowc.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xwctomb.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xwctomb.obj) : error LNK2005: __Getcvt は既に msvcprtd.lib(MSVCP140D.dll) で定義されています。
+libcpmtd.lib(xwcscoll.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xgetwctype.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xtowlower.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xtowupper.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xstrxfrm.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(xmtx.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(StlCompareStringW.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(StlLCMapStringW.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MTd_StaticDebug' が MDd_DynamicDebug の値 'main.obj' と一致しません。
+LINK : warning LNK4098: defaultlib 'LIBCMTD' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
+C:\Users\shouh\Documents\sega_gameprogramma\my\sample_2\Debug\sample_2.exe : fatal error LNK1169: 1 つ以上の複数回定義されているシンボルが見つかりました。

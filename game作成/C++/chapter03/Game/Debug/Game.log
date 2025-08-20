@@ -1,0 +1,16 @@
+﻿  Game.cpp
+C:\Users\shouh\Documents\C++\chapter03\Game.cpp(49,42): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+  Game.vcxproj -> C:\Users\shouh\Documents\C++\chapter03\Debug\Game.exe
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\libfreetype-6.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\libogg-0.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\libpng16-16.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\libvorbis-0.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\SDL2.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\SDL2_image.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\SDL\lib\win\x86\zlib1.dll
+  10 個のファイルをコピーしました
+  C:\Users\shouh\Documents\C++\chapter03\\..\external\GLEW\lib\win\x86\glew32.dll
+  1 個のファイルをコピーしました

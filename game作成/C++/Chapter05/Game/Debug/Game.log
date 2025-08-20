@@ -1,0 +1,16 @@
+﻿  Game.cpp
+C:\Users\shouh\Documents\C++\Chapter05\Game.cpp(151,17): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  Game.vcxproj -> C:\Users\shouh\Documents\C++\Chapter05\Debug\Game.exe
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\libfreetype-6.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\libogg-0.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\libpng16-16.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\libvorbis-0.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\SDL2.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\SDL2_image.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\SDL\lib\win\x86\zlib1.dll
+  10 個のファイルをコピーしました
+  C:\Users\shouh\Documents\C++\Chapter05\\..\external\GLEW\lib\win\x86\glew32.dll
+  1 個のファイルをコピーしました

@@ -1,0 +1,38 @@
+﻿main.obj : warning LNK4075: /EDITANDCONTINUE は /SAFESEH の指定によって無視されます。
+GameLib_d.lib(Framework.obj) : error LNK2019: 未解決の外部シンボル __imp__GetAsyncKeyState@4 が関数 "public: class GameLib::StandardInput & __thiscall GameLib::StandardInput::operator>>(char &)" (??5StandardInput@GameLib@@QAEAAV01@AAD@Z) で参照されました
+GameLib_d.lib(InputManaegr.obj) : error LNK2001: 外部シンボル __imp__GetAsyncKeyState@4 は未解決です
+GameLib_d.lib(Halt.obj) : error LNK2019: 未解決の外部シンボル __imp__MessageBoxA@16 が関数 "void __cdecl GameLib::halt(char const *,int,char const *)" (?halt@GameLib@@YAXPBDH0@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2001: 外部シンボル __imp__MessageBoxA@16 は未解決です
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__GetMessageA@16 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__TranslateMessage@4 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__DispatchMessageA@4 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__PeekMessageA@20 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__DefWindowProcA@16 が関数 "long __stdcall WndProc(struct HWND__ *,unsigned int,unsigned int,long)" (?WndProc@@YGJPAUHWND__@@IIJ@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__PostQuitMessage@4 が関数 "long __stdcall WndProc(struct HWND__ *,unsigned int,unsigned int,long)" (?WndProc@@YGJPAUHWND__@@IIJ@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__RegisterClassExA@4 が関数 "unsigned short __cdecl MyRegisterClass(struct HINSTANCE__ *)" (?MyRegisterClass@@YAGPAUHINSTANCE__@@@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__CreateWindowExA@48 が関数 "int __cdecl InitInstance(struct HINSTANCE__ *,int)" (?InitInstance@@YAHPAUHINSTANCE__@@H@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__DestroyWindow@4 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__ShowWindow@8 が関数 "int __cdecl InitInstance(struct HINSTANCE__ *,int)" (?InitInstance@@YAHPAUHINSTANCE__@@H@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__SetWindowPos@28 が関数 "public: void __thiscall GameLib::`anonymous namespace'::Impl::enableFullScreen(bool)" (?enableFullScreen@Impl@?A0x8b6fec03@GameLib@@QAEX_N@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__LoadAcceleratorsA@8 が関数 _WinMain@16 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__TranslateAcceleratorA@12 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__UpdateWindow@4 が関数 "int __cdecl InitInstance(struct HINSTANCE__ *,int)" (?InitInstance@@YAHPAUHINSTANCE__@@H@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__GetWindowRect@8 が関数 "public: void __thiscall GameLib::`anonymous namespace'::Impl::enableFullScreen(bool)" (?enableFullScreen@Impl@?A0x8b6fec03@GameLib@@QAEX_N@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__AdjustWindowRect@12 が関数 "int __cdecl InitInstance(struct HINSTANCE__ *,int)" (?InitInstance@@YAHPAUHINSTANCE__@@H@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__SetWindowLongA@12 が関数 "public: void __thiscall GameLib::`anonymous namespace'::Impl::enableFullScreen(bool)" (?enableFullScreen@Impl@?A0x8b6fec03@GameLib@@QAEX_N@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__LoadCursorA@8 が関数 "unsigned short __cdecl MyRegisterClass(struct HINSTANCE__ *)" (?MyRegisterClass@@YAGPAUHINSTANCE__@@@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__LoadIconA@8 が関数 "unsigned short __cdecl MyRegisterClass(struct HINSTANCE__ *)" (?MyRegisterClass@@YAGPAUHINSTANCE__@@@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__DragQueryFileA@16 が関数 "long __stdcall WndProc(struct HWND__ *,unsigned int,unsigned int,long)" (?WndProc@@YGJPAUHWND__@@IIJ@Z) で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__DragAcceptFiles@8 が関数 __catch$_WinMain@16$0 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__CoUninitialize@0 が関数 __catch$_WinMain@16$2 で参照されました
+GameLib_d.lib(WindowCreator.obj) : error LNK2019: 未解決の外部シンボル __imp__CoInitializeEx@8 が関数 _WinMain@16 で参照されました
+GameLib_d.lib(InputManaegr.obj) : error LNK2019: 未解決の外部シンボル __imp__GetCursorPos@4 が関数 "public: void __thiscall GameLib::Input::ManagerImpl::update(float,class GameLib::Math::Vector2 const &)" (?update@ManagerImpl@Input@GameLib@@QAEXMABVVector2@Math@3@@Z) で参照されました
+GameLib_d.lib(InputManaegr.obj) : error LNK2019: 未解決の外部シンボル __imp__ScreenToClient@8 が関数 "public: void __thiscall GameLib::Input::ManagerImpl::update(float,class GameLib::Math::Vector2 const &)" (?update@ManagerImpl@Input@GameLib@@QAEXMABVVector2@Math@3@@Z) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__CreateCompatibleDC@4 が関数 "public: __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::FontImplOS(char const *,int,bool,bool,bool,bool,int,int)" (??0FontImplOS@?A0x89653635@Scene@GameLib@@QAE@PBDH_N111HH@Z) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__CreateFontA@56 が関数 "public: __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::FontImplOS(char const *,int,bool,bool,bool,bool,int,int)" (??0FontImplOS@?A0x89653635@Scene@GameLib@@QAE@PBDH_N111HH@Z) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__DeleteDC@4 が関数 "public: virtual __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::~FontImplOS(void)" (??1FontImplOS@?A0x89653635@Scene@GameLib@@UAE@XZ) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__DeleteObject@4 が関数 "public: virtual __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::~FontImplOS(void)" (??1FontImplOS@?A0x89653635@Scene@GameLib@@UAE@XZ) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__GetGlyphOutlineA@28 が関数 "public: struct GameLib::Scene::A0x89653635::FontImplOS::Char const * __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::createGlyph(int)" (?createGlyph@FontImplOS@?A0x89653635@Scene@GameLib@@QAEPBUChar@1234@H@Z) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__SelectObject@8 が関数 "public: __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::FontImplOS(char const *,int,bool,bool,bool,bool,int,int)" (??0FontImplOS@?A0x89653635@Scene@GameLib@@QAE@PBDH_N111HH@Z) で参照されました
+GameLib_d.lib(Font.obj) : error LNK2019: 未解決の外部シンボル __imp__GetTextMetricsA@8 が関数 "public: __thiscall GameLib::Scene::`anonymous namespace'::FontImplOS::FontImplOS(char const *,int,bool,bool,bool,bool,int,int)" (??0FontImplOS@?A0x89653635@Scene@GameLib@@QAE@PBDH_N111HH@Z) で参照されました
+C:\Users\shouh\Documents\sega_gameprogramma\sample\GameLib2022\src\02_2DGraphics1\Debug\drawPixels.exe : fatal error LNK1120: 34 件の未解決の外部参照
