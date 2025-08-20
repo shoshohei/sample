@@ -1,3 +1,53 @@
 game作成/unity
 game作成/sega_gameprogramma
 game作成/code
+
+# ビルド生成物
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio キャッシュ
+.vs/
+
+# ユーザー固有ファイル
+*.user
+*.rsuser
+*.suo
+
+# NuGet
+packages/
+*.nupkg
+
+# ログ・一時ファイル
+*.log
+*.tlog
+*.tmp
+*.pdb
+*.obj
+*.cache
+
+# --- Unity ---
+[Ll]ibrary/
+[Tt]emp/
+Obj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+
+# User-specific
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# IDE cache
+.vs/
