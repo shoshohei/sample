@@ -1,0 +1,16 @@
+
+from collections import deque
+n, Q = [int(i) for i in input().split(' ')]
+wait_ls = deque(list(range(1, n+1)))
+called_ls = deque()
+wait_ls = list(range(1, n+1))
+called_ls = []
+for q in range(Q):
+    in_ = [int(i) for i in input().split(' ')]
+    if in_[0]==1:
+        called = wait_ls.pop(0)
+        wait_ls.sort()
+        called_ls.append(called)
+
+    elif in_[0]:
+        
