@@ -1,0 +1,19 @@
+
+s=list(input())
+len = len(s)
+i='i'
+o='o'
+res=0
+index=0
+for j,c in enumerate(s):
+    if index%2==0 and c!=i:
+        res+=1
+        index+=1
+        len+=1
+    elif index%2==1 and c!=o:
+        res+=1
+        index+=1
+        len +=1
+    index+=1
+if len%2!=0:res+=1
+print(res)
