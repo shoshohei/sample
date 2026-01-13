@@ -5,3 +5,4 @@ out = 'No'
 if ''.join(s[-3:])=='tea':
     out = 'Yes'
 print(out)
+

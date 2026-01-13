@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.4.16)  25 APR 2025 12:01
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.4.16)  12 OCT 2025 18:39
  restricted system commands enabled.
  file:line:error style messages enabled.
-**c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex
-(c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex
+**c:/Users/shouh/Documents/sample/tex/解析入門Ⅰ/Introduce_analysis.tex
+(c:/Users/shouh/Documents/sample/tex/解析入門Ⅰ/Introduce_analysis.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -630,86 +630,14 @@ Overfull \hbox (122.57858pt too wide) in paragraph at lines 625--644
 [11]
 
 [12]
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:734: Undefined control sequence.
-l.734 ...n \mathbb{R},f(x)=\lim_{n \rightarrow \ty
-                                                  } (\lim_{m \rightarrow \in...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:762: Undefined control sequence.
-<argument> ...= \int dudv P(u,v)\Theta (-uv) \tha 
-                                                  (\because \epsilon = |u-v|...
-l.762 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:762: Undefined control sequence.
-<argument> ...{-\infty }^0 dv P(u,v) \\ &= 2\codt 
-                                                  \frac {1}{2\pi \sqrt {1-R^...
-l.762 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:762: Undefined control sequence.
-<argument> 2(1\R 
-                 ^2)
-l.762 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:762: Undefined control sequence.
-<argument> ...= \int dudv P(u,v)\Theta (-uv) \tha 
-                                                  (\because \epsilon = |u-v|...
-l.762 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:762: Undefined control sequence.
-<argument> ...{-\infty }^0 dv P(u,v) \\ &= 2\codt 
-                                                  \frac {1}{2\pi \sqrt {1-R^...
-l.762 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex:762: Undefined control sequence.
-<argument> 2(1\R 
-                 ^2)
-l.762 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 
 [13]
 
-[14] (./Introduce_analysis.aux)
+[14]
+
+[15]
+
+[16] (./Introduce_analysis.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
@@ -717,19 +645,19 @@ L3 programming layer <2025-03-26>
 )
 
 Here is how much of LuaTeX's memory you used:
- 4862 strings out of 471941
+ 4857 strings out of 471941
  156565,662416 words of node,token memory allocated
- 3427 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 1283 attribute, 55 glue_spec, 129 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:26,2:42368,3:441,4:359,5:350,6:50,7:5277,8:53,9:1899,10:39,11:2
- 31320 multiletter control sequences out of 65536+600000
+ 3499 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 1316 attribute, 55 glue_spec, 132 attribute_list, 1 write, 14 user_defined nodes
+   avail lists: 1:28,2:42332,3:440,4:341,5:268,6:49,7:5277,8:58,9:1899,10:39,11:10
+ 31315 multiletter control sequences out of 65536+600000
  100 fonts using 62930287 bytes
- 119i,14n,112p,1924b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans12-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Introduce_analysis.pdf (14 pages, 290273 bytes).
+ 119i,14n,112p,1934b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans12-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Introduce_analysis.pdf (16 pages, 310116 bytes).
 
-PDF statistics: 158 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

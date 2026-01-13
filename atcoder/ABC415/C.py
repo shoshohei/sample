@@ -1,29 +1,34 @@
 t = int(input())
+N, S = [0]*(t), ['']*t
+# print(N,S)
+for i in range(t): 
+    N[i], S[i] = int(input()), list(input())
+    S[i] = [True if i=='1' else False for i in S[i]]
 
-for _ in range(t):
-    res = 'Yes'
-    num = int(input())
-    s = input()
-    # pos = [i for i, c in enumerate(s) if c == '1']
-    # # 危険になる状態の二進数表記
-    # bins = [format(p+1, 'b') for p in pos]
-    # for b in bins:
-
-    # 全部入れたらアウトか確認
-    if s[-1]=='1': res = 'No'
-
-    # 一種類入れた場合がすべてダメか確認
-    if res!='No':
-        boo = [False]*num
-        for i in range(num):
-            if s[2**i-1]=='1':
-                boo[i] = True
-        if sum(boo)==num: res = 'No'
-
-    if res!='No':
-        
-
-    
-
-
-    print(res)
+for i in range(t):
+    out = 'Yes'
+    n, s = N[i], S[i]
+    # print(n,s)
+    # S[i].reverse()
+    count = 0
+    for j in range(1, n+1):
+        val = 2**(j-1)
+        # print(val, s[val-1])
+        if s[val-1]: 
+            count += 1
+    # print(count, n)
+    if count==n:
+        print('No')
+        continue
+    count = 0
+    for j in range(1, n+1):
+        for k in range(j+1, n+1):
+            val = 2**(j-1)+2**(k-1)
+            # print(val, s[val-1])
+            if s[val-1]:
+                count += 1
+                
+    # print(count, n, n*(n-1)//2, out)
+    if count==n*(n-1)//2:
+        out = 'No'
+    print(out)

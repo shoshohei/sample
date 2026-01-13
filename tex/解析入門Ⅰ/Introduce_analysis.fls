@@ -1,6 +1,6 @@
-PWD c:/Users/shouh/sample/tex/解析入門Ⅰ
+PWD c:/Users/shouh/Documents/sample/tex/解析入門Ⅰ
 INPUT c:/texlive/2025/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT c:/Users/shouh/sample/tex/解析入門Ⅰ/Introduce_analysis.tex
+INPUT c:/Users/shouh/Documents/sample/tex/解析入門Ⅰ/Introduce_analysis.tex
 OUTPUT Introduce_analysis.log
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/ltluatex.lua
@@ -227,6 +227,7 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

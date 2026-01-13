@@ -1,0 +1,11 @@
+n, q = [int(i) for i in input().split(' ')]
+A = [int(i) for i in input().split(' ')]
+T, B = [0]*q, [0]*q
+for i in range(n): T[i], B[i] = [int(i) for i in input().split(' ')]
+loop_path = []
+visited = [False]*(n+1)
+index = 1
+counts = [0]*(n+1)
+while counts[index]<=2:
+    counts[index-1] += 1
+    index = A[index-1]

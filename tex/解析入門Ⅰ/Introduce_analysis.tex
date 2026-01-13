@@ -700,7 +700,8 @@ Th2.5は数列の極限をとる操作と四則演算の順序を交換しても
   Th2.6の$b_n=c$または$b_n=d$とすると成り立つ．
 \end{proof}
 
-\begin{prop}{はさみうちの原理}
+\begin{prop}
+  （はさみうちの原理）
   数列$(a_n)_{n \in \mathbb{N}},(b_n)_{n \in \mathbb{N}}$がともに$a$に収束し，
   $\forall n \in \mathbb{N},a_n \le b_n$を満たしているとする．いま数列$(c_n)_{n \in \mathbb{N}}$が$\forall n \in \mathbb{N}$
   \begin{align*}
@@ -729,36 +730,165 @@ $\lim_{n \rightarrow \infty} c_n=0.$これはProp2.7と例５から明らか．
 \begin{enumerate}[label={\arabic*}),itemsep=1em]
   \item 第n項$a_n$が次の式で与えられる数列の極限を求めよ
   \begin{enumerate}[label=({\roman*}),itemsep=1pt,parsep=0pt]
-    \item $\frac{a^n}{n!}をa$の値で場合分けする．
+    \item $a_n = \frac{a^n}{n!}$.
+      \begin{proof}
+        $a$の絶対値を考える．
+        $n=k, k+1$の隣接項を使用し比を考えると，
+        \[
+        \begin{aligned}
+          \frac{a_k+1}{a_k} &= \frac{a^{k+1}*n!}{a^k*(n+1)!} \\
+          &= \frac{a}{(n+1)}
+        \end{aligned}
+        \]
+        これは，$n\rightarrow \infty$で0に収束する．
+        ある$N$をとれば$n\ge N$に対し，
+        \begin{align*}
+          \frac{|a|}{n+1}\le \frac{|a|}{N+1}=r<1
+        \end{align*}
+        が成り立ち，$n\ge N$に対して項列は単調減少する．
+        よって題意の項は0に収束する．
+      \end{proof}
+
+    \item $a_n = \sqrt[n]{a}　(a>0)$.
+      \begin{proof}
+        対数をとると，$\log a_n=\frac{1}{n}\log a$と変形できるため，$\lim_{n \rightarrow \infty} \log a_n = 0$.\\
+        以上の結果から，題意の数列の極限は1に収束する．
+      \end{proof}
+    \item $a_n = \frac{n!}{n^n}$.
+      \begin{proof}
+        \begin{align*}
+          \lim_{n \rightarrow \infty} a_n &= \lim_{n \rightarrow \infty} \frac{n!}{n^n} \\
+          &= \lim_{n \rightarrow \infty} \frac{n}{n} \cdot \frac{n-1}{n} \cdot \cdots \cdot \frac{1}{n} \\
+          &= \lim_{n \rightarrow \infty} 1 \cdot 1 \cdot \cdots \cdot 0 \\
+          &= 0.
+        \end{align*}
+      \end{proof}
+    \item $a_n = \frac{n}{2^n}$.
+      \begin{proof}
+        二項定理から
+        \begin{align*}
+          \frac{n}{2^n} &= \frac{n}{(1+1)^n} \\
+          &\le \frac{n}{1+n+\frac{n(n-1)}{2}}
+        \end{align*}
+        とあらわせるため，挟み撃ちの原理から題意の数列の極限は0に収束する．
+      \end{proof}
+    \item $a_n = \sqrt{n+1}-\sqrt{n}$.
+    \begin{proof}
+      \begin{align*}
+        0 \le a_n &= \frac{1}{\sqrt{n+1}+\sqrt{n}} \\
+        &\le \frac{1}{2\sqrt{n}}
+      \end{align*}
+      はさみうちの原理から，$a_n$の極限は0に収束する．
+    \end{proof}
   \end{enumerate}
-  \item $x \in \mathbb{R},f(x)=\lim_{n \rightarrow \ty} (\lim_{m \rightarrow \infty} (\cos(n!\pi x))^{2m})$を求める
+  \item $x \in \mathbb{R},f(x)=\lim_{n \rightarrow \infty} (\lim_{m \rightarrow \infty} (\cos(n!\pi x))^{2m})$を求める．
+  \begin{proof}
+    まず$n$を固定して考える．\\
+    \[
+    \lim_{m \rightarrow \infty} (\cos(n!\pi x))^{2m} = 
+    \begin{cases}
+      1, & \text{if } |\cos(n!\pi x)| = 1, \\[4pt]
+      0, & \text{otherwise.}
+    \end{cases}
+    \]
+    $|\cos(\theta)|=1$となるのは，$\theta=k\pi$の時に限る．つまり，$n!x\in\mathbb{Z}$である．\\
+    つづいて，$x\in\mathbb{Z}\Rightarrow\frac{p}{q}　p, q\in\mathbb{Z}$であれば，分母$q$はある$n\geq\text{で}n!$に含まれるので，十分大きな$n$以降で成り立つため，
+    \begin{align*}
+      f(x) = 1 \quad(x \in \mathbb{Q})
+    \end{align*}
+    $x\notin\mathbb{Q}$であれば，$n!x\in\mathbb{Z}$とすると$x$は有理数$\frac{k}{n!}$となり矛盾するため，
+    \begin{align*}
+      f(x) = 0 \quad(x \notin \mathbb{Q})
+    \end{align*}
+    以上より，
+    \[
+    f(x) = 
+    \begin{cases}
+      1, &x \in Q, \\[4pt]
+      0, &\text{otherwise.}
+    \end{cases}
+    \]
+  \end{proof}
   \item $\lim_{n \rightarrow \infty} a_n=a$が存在するとき
   \begin{align*}
-    \lim_{n \rightarrow \infty} \frac{a_1 +a_2 + \cdots a_n}{n}=a
+    \lim_{n \rightarrow \infty} \frac{a_1 +a_2 + \cdots +a_n}{n}=a
   \end{align*}
   を示す
+  \begin{proof}
+    仮定から，$(\forall \epsilon>0)(\exists n_0 \in \mathbb{N})(\forall n\in \mathbb{N})(n\ge n_0\rightarrow|a_n-a_|<\epsilon)$\\
+    また求めたい式を変形すると，
+    \begin{align*}
+      \frac{a_1 +a_2 + \cdots +a_n}{n}-a = \frac{(a_1-a) +(a_2-a) + \cdots +(a_n-a)}{n}
+    \end{align*}
+    有限項$\frac{(a_1-a)+(a_2-a)+\cdots+(a_{N-1}-a)}{n}$の極限値は0となる．
+    さらに，仮定より
+    \begin{align*}
+      |\frac{(a_N-a)+(a_{N+1}+\cdots+(a_n-a))}{n}|\le \frac{n-N+1}{n}\epsilon \le \epsilon
+    \end{align*}
+    以上より題意が成り立つ．
+  \end{proof}
   \item 正数列$(a_n)_{n \in \mathbb{N}}$に対して，$\lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}=a$が存在すれば，
   $\lim_{n \rightarrow \infty} \sqrt[n]{a_n}=a$であることを示す．
-  \item $\mathbb{N}\in m \ge 1,a \subset \mathbb{N},\text{イ)}m=\text{min}A,\text{ロ)}n\in A,n\ge m\Rightarrow n+1 \in A$
+  \begin{proof}
+    $b_n = \log a_n$と置くと，仮定の極限は，\\
+    \begin{align*}
+      \lim_{n\to \infty} \frac{a_{n+1}}{a_n} &= \lim_{n\to \infty} \frac{e^{b_{n+1}}}{e^{b_n}} \\
+      &= \lim_{n\to \infty} e^{b_{n+1}-b_n} \\
+      &= \log a
+    \end{align*}
+    また求めたい極限は，$\sqrt[n]{a_n} = e^{\frac{b_n}{n}}$.
+    このため，$\exp^{\frac{b_n}{n}}$の極限を求めればよい．
+    さらに，$b_n$は以下のように変更できる．
+    \begin{align*}
+      b_n &= b_1 + \sum_{k=1}^{n-1} (b_k+1-b_k) \\
+      \frac{b_n}{n} &= \frac{b_1}{n} + \frac{\sum_{k=1}^{n-1} (b_{k+1}-b_k)}{n} \\
+    \end{align*}
+    ここで，$d_k = b_{k+1}-b_k$とおくと，$(\epsilon>0)(\exists n_0\in \mathbb{N})(\forall n\ge n_0) \Rightarrow|d_n -\log a| < \epsilon$である.
+    \begin{align*}
+      \frac{\sum_{k=1}^{n-1} (b_{k+1}-b_k)}{n} &= \frac{\sum_{k=1}^{n-1} d_k}{n} \\
+      &= \frac{\sum_{k=1}^{n_0-1} d_k}{n} + \frac{\sum_{k=n_0}^{n} d_k}{n}
+    \end{align*}
+    $d_k$の極限から，
+    \begin{align*}
+      \left|\frac{(d_{n_0}-\log a)+(d_{n_0+1}-\log a)+\cdots+(d_n-\log a)}{n}\right| \le \frac{n-n_0+1}{n}\epsilon \le \epsilon
+    \end{align*}
+    となるため，
+    \begin{align*}
+      \lim_{n\to \infty} \frac{b_n}{n} &= \log a \\
+      &\Rightarrow \lim_{n \to \infty} \sqrt[n]{a} \\
+      &= \lim_{n to \infty} e^{\frac{b_n}{n}} \\
+      &= \lim_{n \to \infty} a = a
+    \end{align*}
+  \end{proof}
+  \item $\mathbb{N}\in m \ge 1,A \subset \mathbb{N},\text{イ)}m=\text{min}A,\text{ロ)}n\in A,n\ge m\Rightarrow n+1 \in A$
   を満たすなら$A=\{n \in \mathbb{N} \mid n \ge m\}$であることを示す．
-  \item $m,n \in \mathbb{N} \Rightarrow m+n,mn,m-n \in \mathbb{N} (m \ge n)$を示す．
+  \begin{proof}
+    $a \in A$とする．$A \subset \mathbb{N}$のため，$a \in \mathbb{N}$.\\
+    (イ)から$a \ge m$のため，$a \in \{a \in \mathbb{N}\mid n\ge m\}$であるため，$A \subset \{a \in \mathbb{N}\mid n\ge m\}$. \\
+    $H=A \cup \{0\} \cup \{1\} \cup \cdots \cup \{m-1\}$とし，$H$が継承的であることを示す．\\
+    $0\in H$．$x \in H$とすると，\\
+    $x = 0, 1, \cdots ,m-2$のとき$\{x-1\} \in H$であるため，$x+1 \in H$.\\
+    $x = m-1$のとき，$x+1=m$なので(イ)から$m\in A$であることから$x+1 \in H$.\\
+    $x \in A$のとき， (ロ)から$x \ge m$なので$x+1 \in A$であることから，$x+1 \in H$.\\
+    以上より$H$は継承的である．ので$\mathbb{N} \subset H$.\\
+    $a \in \mathbb{N}, a \ge m$とする．\\
+    $\mathbb{N} \subset H$から$a \in H$
+    また，$a\ge m$から$a \neq \{0\} \cup \{1\} \cup \cdots \cup \{m-1\}$のため$a \in A$で，$\{a \in \mathbb{N}\mid a\ge m\} \subset A$.
+    以上より$A = \{a \in \mathbb{N}\mid a\ge m\} \subset A$.
+  \end{proof}
+  \item $m,n \in \mathbb{N} \Rightarrow m+n,mn,m-n \in \mathbb{N} \quad (m \ge n)$を示す．
+  \begin{proof}
+    $n \in \mathbb{N}$に対し，$A_n = \{x in \mathbb{R}\mid x+n \in \mathbb{N}\}$とし，$A_n$が継承的であることを示す．\\
+    $n \in \mathbb{N} \Rightarrow 0+n \in \mathbb{N} \Rightarrow 0 \in A_n$.\\
+    $x \in A_n \Rightarrow x+n \in \mathbb{N}, (x+n)+1 \in A_n$.（$\mathbb{N}が継承的なので）\\
+    
+  \end{proof}
   \item $n \in \mathbb{N} \Rightarrow n<k<n+1$となる自然数$k$は存在しないことを示す．
+  \begin{proof}
+    
+  \end{proof}
 \end{enumerate}
 
 
-\begin{align}
-  \epsilon_g &= \int P(u, v) \cdot \epsilon(u,v)du dv \\
-  &= \int dudv P(u,v)\Theta(-uv) \tha (\because \epsilon = |u-v|) \\
-  &= \int_0^\infty du \int_{-\infty}^0 dvP(u,v) + \int_{-\infty}^0 du \int_0^\infty dv P(u,v) (\because u,v\text{どちらかが負の場合だけ発火}) \\
-  &= \int_0^\infty du \int_{-\infty}^0 dvP(u,v) + \int_{\infty}^0 (-du) \int_0^{-\infty} (-dv)P(-u,-v) (\because u' = -u, v' = -v) \\
-  &= \int_0^\infty du \int_{-\infty}^0 dvP(u,v) + \int_{\infty}^0 du \int_0^{-\infty} dv P(u,v) \\
-  &= 2\int_0^\infty du \int_{-\infty}^0 dv P(u,v) \\
-  &= 2\codt \frac{1}{2\pi \sqrt{1-R^2}} \int_0^\infty du \int_{-\infty}^0 dv \exp(-\frac{u^2+v^2 2Ruv}{2(1-R^2)}) \\
-  &= \frac{1}{\pi \sqrt{1-R^2}} \int _0^\infty du \int_{-\infty}^0 dv \exp(-\frac{u^2 + (v-Ruv)^2 -R^2 u^2}{2(1\R^2)}) (\because u\text{のみの項を作りたい}) \\
-  &= \frac{1}{\pi \sqrt{1-R^2}} \int_0^\infty du \exp(-\frac{u^2}{2}) \int_{-\infty}^0 dv \exp(-\frac{(v-Ru)^2}{2(1-R^2)}) \\
-  &= \frac{1}{\pi \sqrt{1-R^2}} \int_0^\infty du \exp(-\frac{u^2}{2}) \int_{-\infty}^{-Ru} dw \exp(-\frac{w^2}{2(1-R^2)})\\
-  &(\because w = v-Ru, dw = dv(u\text{は定数とみなせる}), v \to 0 \Rightarrow w \to -Ru)\\
-  &= a
-\end{align}
 
 \end{document}
