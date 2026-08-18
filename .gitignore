@@ -1,8 +1,6 @@
 game/sega_gameprogramma
 game/code
-game/unity/soundFiles
-game/unity/LowpolyAsset
-game/unity/コンテスト素材
+game/unity
 # ビルド生成物
 [Bb]in/
 [Oo]bj/
